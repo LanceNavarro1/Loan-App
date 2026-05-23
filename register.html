@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body class="login-page">
+  <main class="login-page-wrap register-page-wrap">
+    <section class="login-panel register-panel" aria-labelledby="register-title">
+      <div class="login-brand-lockup">
+        <a class="brand login-brand" href="landing.html" aria-label="Easy Loan home">
+          <span class="material-symbols-outlined brand-icon" aria-hidden="true">account_balance</span>
+          <span>Easy Loan</span>
+        </a>
+        <p>User Access</p>
+      </div>
+
+      <h2 id="register-title">Create Account</h2>
+      <p class="login-copy">Set up your profile so you can apply for loans and track payments.</p>
+
+      <form class="form-grid login-form register-form two-column" data-register-form data-redirect="user/dashboard.html">
+        <div class="form-note span-full">
+          <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+          <span>Use accurate details. These will appear in your loan applications and payment records.</span>
+        </div>
+
+        <label class="field login-field">
+          <span>First Name</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <input type="text" name="first_name" placeholder="Juan" autocomplete="given-name" required>
+          </span>
+        </label>
+
+        <label class="field login-field">
+          <span>Last Name</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">badge</span>
+            <input type="text" name="last_name" placeholder="Dela Cruz" autocomplete="family-name" required>
+          </span>
+        </label>
+00
+        <label class="field login-field span-full">
+          <span>Gmail Address</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            <input type="email" name="email" placeholder="name@gmail.com" autocomplete="email" required>
+          </span>
+        </label>
+
+        <label class="field login-field span-full">
+          <span>Contact Number</span>
+          <span class="input-with-icon phone-input">
+            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+            <select name="country" data-country-code aria-label="Country contact format">
+              <option value="ar" data-placeholder="+54 9 11 1234-5678">AR</option>
+              <option value="au" data-placeholder="+61 412 345 678">AU</option>
+              <option value="at" data-placeholder="+43 664 1234567">AT</option>
+              <option value="bd" data-placeholder="+880 1712-345678">BD</option>
+              <option value="be" data-placeholder="+32 470 12 34 56">BE</option>
+              <option value="br" data-placeholder="+55 11 91234-5678">BR</option>
+              <option value="ca" data-placeholder="+1 (416) 555-0199">CA</option>
+              <option value="cl" data-placeholder="+56 9 1234 5678">CL</option>
+              <option value="cn" data-placeholder="+86 131 2345 6789">CN</option>
+              <option value="co" data-placeholder="+57 300 1234567">CO</option>
+              <option value="dk" data-placeholder="+45 20 12 34 56">DK</option>
+              <option value="eg" data-placeholder="+20 100 123 4567">EG</option>
+              <option value="fi" data-placeholder="+358 40 1234567">FI</option>
+              <option value="fr" data-placeholder="+33 6 12 34 56 78">FR</option>
+              <option value="de" data-placeholder="+49 1512 3456789">DE</option>
+              <option value="gr" data-placeholder="+30 691 234 5678">GR</option>
+              <option value="hk" data-placeholder="+852 5123 4567">HK</option>
+              <option value="in" data-placeholder="+91 98765 43210">IN</option>
+              <option value="id" data-placeholder="+62 812-3456-7890">ID</option>
+              <option value="ie" data-placeholder="+353 85 123 4567">IE</option>
+              <option value="il" data-placeholder="+972 50-123-4567">IL</option>
+              <option value="it" data-placeholder="+39 312 345 6789">IT</option>
+              <option value="jp" data-placeholder="+81 90-1234-5678">JP</option>
+              <option value="my" data-placeholder="+60 12-345 6789">MY</option>
+              <option value="mx" data-placeholder="+52 55 1234 5678">MX</option>
+              <option value="nl" data-placeholder="+31 6 12345678">NL</option>
+              <option value="nz" data-placeholder="+64 21 123 4567">NZ</option>
+              <option value="ng" data-placeholder="+234 801 234 5678">NG</option>
+              <option value="no" data-placeholder="+47 412 34 567">NO</option>
+              <option value="pk" data-placeholder="+92 300 1234567">PK</option>
+              <option value="ph" data-placeholder="+63 912 345 6789" selected>PH</option>
+              <option value="pl" data-placeholder="+48 512 345 678">PL</option>
+              <option value="pt" data-placeholder="+351 912 345 678">PT</option>
+              <option value="sa" data-placeholder="+966 50 123 4567">SA</option>
+              <option value="sg" data-placeholder="+65 8123 4567">SG</option>
+              <option value="za" data-placeholder="+27 82 123 4567">ZA</option>
+              <option value="kr" data-placeholder="+82 10-1234-5678">KR</option>
+              <option value="es" data-placeholder="+34 612 34 56 78">ES</option>
+              <option value="se" data-placeholder="+46 70 123 45 67">SE</option>
+              <option value="ch" data-placeholder="+41 79 123 45 67">CH</option>
+              <option value="tw" data-placeholder="+886 912 345 678">TW</option>
+              <option value="th" data-placeholder="+66 81 234 5678">TH</option>
+              <option value="tr" data-placeholder="+90 532 123 45 67">TR</option>
+              <option value="ae" data-placeholder="+971 50 123 4567">AE</option>
+              <option value="uk" data-placeholder="+44 7400 123456">UK</option>
+              <option value="us" data-placeholder="+1 (555) 000-0000">US</option>
+              <option value="vn" data-placeholder="+84 912 345 678">VN</option>
+            </select>
+            <input type="tel" name="contact" placeholder="+63 912 345 6789" data-phone-input autocomplete="tel" required>
+          </span>
+        </label>
+
+        <label class="field login-field span-full">
+          <span>Home Address</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">home_pin</span>
+            <input type="text" name="address" placeholder="Street, city, province" autocomplete="street-address" required>
+          </span>
+        </label>
+
+        <label class="field login-field">
+          <span>Password</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+            <input type="password" name="password" placeholder="Create password" autocomplete="new-password" minlength="8" required>
+          </span>
+        </label>
+
+        <label class="field login-field">
+          <span>Confirm Password</span>
+          <span class="input-with-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">lock_reset</span>
+            <input type="password" name="confirm_password" placeholder="Repeat password" autocomplete="new-password" minlength="8" required>
+          </span>
+        </label>
+
+        <label class="terms-check span-full">
+          <input type="checkbox" required>
+          <span>I confirm that my information is correct and I agree to the Easy Loan terms and privacy policy.</span>
+        </label>
+
+        <button class="btn btn-block login-submit span-full" type="submit">
+          <span>Create Account</span>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+        </button>
+
+        <p class="login-link-row span-full">Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </section>
+
+    <footer class="login-footer">
+      <p>&copy; 2024 Easy Loan Financial. Secure &amp; Regulated.</p>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </footer>
+  </main>
+  <script src="static/script.js"></script>
+</body>
+</html>

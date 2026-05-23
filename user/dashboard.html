@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="dashboard.html" aria-label="Easy Loan dashboard">
+      <span class="material-symbols-outlined brand-icon" aria-hidden="true">account_balance</span>
+      <span>Easy Loan</span>
+    </a>
+    <nav class="desktop-nav" data-user-nav aria-label="Account navigation">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="apply-loan.html">Apply</a>
+      <a href="loans.html">Loans</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="profile.html">Profile</a>
+    </div>
+  </header>
+
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav aria-label="User menu">
+        <a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+        <a href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+
+      <section class="user-content">
+        <div class="page-head">
+          <div>
+            <p class="page-kicker">Account overview</p>
+            <h1>Dashboard</h1>
+            <p>Track active loans, upcoming payments, and account alerts.</p>
+          </div>
+          <a class="btn btn-small" href="apply-loan.html">Apply Loan</a>
+        </div>
+
+        <div class="content-grid three">
+          <article class="metric-card">
+            <span>Total Active Loans</span>
+            <strong>2</strong>
+            <small>1 approved this month</small>
+          </article>
+          <article class="metric-card">
+            <span>Remaining Balance</span>
+            <strong>&#8369;38,500</strong>
+            <small>Across all loans</small>
+          </article>
+          <article class="metric-card">
+            <span>Next Due Date</span>
+            <strong>Jun 15</strong>
+            <small>&#8369;4,250 due</small>
+          </article>
+        </div>
+
+        <div class="content-grid two" style="margin-top:16px">
+          <section class="panel">
+            <h2>Quick Actions</h2>
+            <div class="quick-actions">
+              <a class="action-tile" href="apply-loan.html"><span class="material-symbols-outlined">add_card</span>Apply Loan</a>
+              <a class="action-tile" href="payments.html"><span class="material-symbols-outlined">credit_card</span>Pay Now</a>
+              <a class="action-tile" href="schedule.html"><span class="material-symbols-outlined">event_note</span>View Schedule</a>
+              <a class="action-tile" href="loan-details.html"><span class="material-symbols-outlined">description</span>Loan Details</a>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2>Notifications</h2>
+            <div class="notice-list">
+              <article class="notice-card">
+                <div class="icon-badge green"><span class="material-symbols-outlined">check_circle</span></div>
+                <div><strong>Loan approved</strong><p>Your personal loan EZL-2026-018 is approved.</p></div>
+              </article>
+              <article class="notice-card">
+                <div class="icon-badge blue"><span class="material-symbols-outlined">schedule</span></div>
+                <div><strong>Payment due soon</strong><p>Your next payment is due on Jun 15, 2026.</p></div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="bottom-nav user-bottom-nav" data-user-nav aria-label="Mobile account navigation">
+    <a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../static/script.js"></script>
+</body>
+</html>
