@@ -341,3 +341,78 @@ demoForms.forEach((form) => {
     }
   });
 });
+
+// Dashboard in-page navigation
+const dashboardViewLinks = document.querySelectorAll("[data-dashboard-view]");
+const dashboardPanels = document.querySelectorAll("[data-dashboard-panel]");
+
+const setDashboardPanel = (view, updateHash = true) => {
+  if (!dashboardPanels.length) {
+    return;
+  }
+
+  const nextView = [...dashboardPanels].some((panel) => panel.dataset.dashboardPanel === view) ? view : "dashboard";
+
+  dashboardPanels.forEach((panel) => {
+    const isActive = panel.dataset.dashboardPanel === nextView;
+    panel.hidden = !isActive;
+    panel.classList.toggle("is-active", isActive);
+  });
+
+  dashboardViewLinks.forEach((link) => {
+    link.classList.toggle("active", link.dataset.dashboardView === nextView);
+  });
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${nextView}`);
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+dashboardViewLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const view = link.dataset.dashboardView;
+    if (!view || !dashboardPanels.length) {
+      return;
+    }
+
+    event.preventDefault();
+    setDashboardPanel(view);
+  });
+});
+
+if (dashboardPanels.length) {
+  const initialView = window.location.hash.replace("#", "") || "dashboard";
+  setDashboardPanel(initialView, false);
+
+  window.addEventListener("hashchange", () => {
+    setDashboardPanel(window.location.hash.replace("#", "") || "dashboard", false);
+  });
+}
+
+// Loan status timeline filter
+const statusFilterButtons = document.querySelectorAll("[data-status-filter]");
+const statusTimelineItems = document.querySelectorAll("[data-status-list] [data-status-kind]");
+
+const setStatusFilter = (filter) => {
+  if (!statusTimelineItems.length) {
+    return;
+  }
+
+  statusTimelineItems.forEach((item) => {
+    const kind = item.dataset.statusKind;
+    const shouldShow = filter === "all" || kind === filter;
+    item.classList.toggle("is-hidden", !shouldShow);
+  });
+
+  statusFilterButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.statusFilter === filter);
+  });
+};
+
+statusFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setStatusFilter(button.dataset.statusFilter || "all");
+  });
+});

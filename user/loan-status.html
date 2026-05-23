@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Status - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="dashboard.html">
+      <span class="material-symbols-outlined brand-icon">account_balance</span>
+      <span>Easy Loan</span>
+    </a>
+    <div class="user-actions">
+      <a class="icon-button" href="notifications.html" aria-label="Notifications">
+        <span class="material-symbols-outlined">notifications</span>
+      </a>
+      <a class="btn btn-small" href="loans.html">My Loans</a>
+    </div>
+  </header>
+
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+        <a href="profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+
+      <section class="user-content">
+        <div class="page-head">
+          <div>
+            <p class="page-kicker">Application tracking</p>
+            <h1>Loan Status</h1>
+            <p>See where your application stands, what was completed, and what action is needed next.</p>
+          </div>
+          <div class="loan-status-head-actions">
+            <a class="btn-secondary" href="loan-details.html">Loan Details</a>
+            <a class="btn btn-small" href="documents.html">Upload Docs</a>
+          </div>
+        </div>
+
+        <div class="loan-status-hero panel">
+          <div class="loan-status-hero-copy">
+            <div class="loan-status-chip">
+              <span class="material-symbols-outlined">radio_button_checked</span>
+              <span>Under Review</span>
+            </div>
+            <h2>Business Expansion Loan</h2>
+            <p>Your application is currently with the credit team. Document validation is complete and the next update is expected within 24 hours.</p>
+            <div class="loan-status-meta">
+              <div><span>Application ID</span><strong>APP-203</strong></div>
+              <div><span>Requested Amount</span><strong>&#8369;25,000</strong></div>
+              <div><span>Submitted</span><strong>May 20, 2026</strong></div>
+              <div><span>Estimated Release</span><strong>May 26, 2026</strong></div>
+            </div>
+          </div>
+
+          <div class="loan-status-scorecard">
+            <div class="loan-status-ring" aria-hidden="true">
+              <div class="loan-status-ring-center">
+                <strong>72%</strong>
+                <span>Complete</span>
+              </div>
+            </div>
+            <div class="loan-status-score-copy">
+              <strong>Approval progress</strong>
+              <p>3 of 4 major review stages are moving forward without issues.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-grid three loan-status-metrics">
+          <article class="metric-card">
+            <span>Current Stage</span>
+            <strong>Credit Review</strong>
+            <small>Assigned to risk officer</small>
+          </article>
+          <article class="metric-card">
+            <span>Next Update</span>
+            <strong>May 25</strong>
+            <small>By 4:00 PM</small>
+          </article>
+          <article class="metric-card">
+            <span>Documents</span>
+            <strong>4 / 4</strong>
+            <small>All files received</small>
+          </article>
+        </div>
+
+        <div class="loan-status-layout">
+          <section class="panel loan-status-panel">
+            <div class="panel-title-row loan-status-panel-head">
+              <h2>Application Timeline</h2>
+              <div class="loan-status-segmented" role="tablist" aria-label="Timeline filter">
+                <button class="is-active" type="button" data-status-filter="all">All</button>
+                <button type="button" data-status-filter="done">Completed</button>
+                <button type="button" data-status-filter="current">Current</button>
+              </div>
+            </div>
+
+            <div class="loan-stage-list" data-status-list>
+              <article class="loan-stage-item is-done" data-status-kind="done">
+                <div class="loan-stage-marker"><span class="material-symbols-outlined">check</span></div>
+                <div class="loan-stage-body">
+                  <div class="loan-stage-head">
+                    <strong>Application Submitted</strong>
+                    <span class="status success">Completed</span>
+                  </div>
+                  <p>Your loan request was received through the online portal.</p>
+                  <small>May 20, 2026 at 09:14 AM</small>
+                </div>
+              </article>
+
+              <article class="loan-stage-item is-done" data-status-kind="done">
+                <div class="loan-stage-marker"><span class="material-symbols-outlined">check</span></div>
+                <div class="loan-stage-body">
+                  <div class="loan-stage-head">
+                    <strong>Identity and Income Verification</strong>
+                    <span class="status success">Completed</span>
+                  </div>
+                  <p>Government ID, proof of billing, and latest payslip passed validation.</p>
+                  <small>May 21, 2026 at 03:48 PM</small>
+                </div>
+              </article>
+
+              <article class="loan-stage-item is-current" data-status-kind="current">
+                <div class="loan-stage-marker"><span class="material-symbols-outlined">hourglass_top</span></div>
+                <div class="loan-stage-body">
+                  <div class="loan-stage-head">
+                    <strong>Credit Assessment</strong>
+                    <span class="status pending">In Progress</span>
+                  </div>
+                  <p>The risk team is evaluating repayment capacity and final eligibility.</p>
+                  <small>Started May 24, 2026 at 10:30 AM</small>
+                </div>
+              </article>
+
+              <article class="loan-stage-item" data-status-kind="upcoming">
+                <div class="loan-stage-marker"><span class="material-symbols-outlined">payments</span></div>
+                <div class="loan-stage-body">
+                  <div class="loan-stage-head">
+                    <strong>Approval and Disbursement</strong>
+                    <span class="status unpaid">Waiting</span>
+                  </div>
+                  <p>Once approved, funds will be transferred to your nominated bank account.</p>
+                  <small>Estimated by May 26, 2026</small>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <aside class="loan-status-side">
+            <section class="panel loan-status-panel">
+              <div class="panel-title-row loan-status-panel-head">
+                <h2>Case Summary</h2>
+              </div>
+              <div class="loan-status-summary">
+                <div class="summary-line"><span>Loan Type</span><strong>Business Expansion</strong></div>
+                <div class="summary-line"><span>Repayment Term</span><strong>12 months</strong></div>
+                <div class="summary-line"><span>Preferred Release</span><strong>Bank Transfer</strong></div>
+                <div class="summary-line"><span>Officer</span><strong>Maria C.</strong></div>
+                <div class="summary-line"><span>Branch</span><strong>Makati Business Center</strong></div>
+              </div>
+            </section>
+
+            <section class="panel loan-status-panel">
+              <div class="panel-title-row loan-status-panel-head">
+                <h2>Recommended Actions</h2>
+              </div>
+              <div class="quick-actions loan-status-actions">
+                <a class="action-tile" href="documents.html"><span class="material-symbols-outlined">upload_file</span>Review uploaded documents</a>
+                <a class="action-tile" href="notifications.html"><span class="material-symbols-outlined">notifications_active</span>Check recent account updates</a>
+                <a class="action-tile" href="payments.html"><span class="material-symbols-outlined">account_balance_wallet</span>Prepare repayment method</a>
+              </div>
+            </section>
+
+            <section class="panel loan-status-panel loan-status-note">
+              <div class="loan-status-note-icon icon-badge blue">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+              </div>
+              <div>
+                <h2>What happens next</h2>
+                <p>If the application is approved, you will receive a notification, a loan agreement, and the release confirmation on the same day.</p>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="loan-status.html"><span class="material-symbols-outlined">monitoring</span><span>Status</span></a>
+    <a href="payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
