@@ -33,7 +33,7 @@
         <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
         <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
       </aside>
-      <section class="user-content">
+      <section class="user-content" data-user-loan-status>
         <div class="page-head">
           <div><p class="page-kicker">Application timeline</p><h1>Loan Status</h1><p>Track each stage of your loan review and approval process.</p></div>
           <a class="btn btn-small" href="../support/support.html">Need Help?</a>
@@ -41,13 +41,13 @@
         <section class="loan-status-hero panel">
         <div class="loan-status-hero-copy">
           <div class="loan-status-chip"><span class="material-symbols-outlined">hourglass_top</span><span>Pending Review</span></div>
-          <h2>Application ID: #LN-2026-00123</h2>
+          <h2>Application ID: Saved loan</h2>
           <p>Track your loan application progress in real time. Your documents are currently being reviewed by the Easy Loan verification team.</p>
           <div class="loan-status-meta">
-            <div><span>Loan Amount</span><strong>&#8369;10,000</strong></div>
-            <div><span>Date Applied</span><strong>May 20, 2026</strong></div>
+            <div><span>Loan Amount</span><strong>Loads from saved data</strong></div>
+            <div><span>Date Applied</span><strong>Saved date</strong></div>
             <div><span>Current Status</span><strong>Pending Review</strong></div>
-            <div><span>Reference</span><strong>APP-203</strong></div>
+            <div><span>Reference</span><strong>Saved loan</strong></div>
           </div>
         </div>
         <div class="loan-status-scorecard">
@@ -59,8 +59,8 @@
       <section class="panel loan-status-panel">
         <div class="panel-title-row loan-status-panel-head"><h2>Progress Tracker</h2><span class="status pending">Pending Review</span></div>
         <div class="loan-stage-list">
-          <article class="loan-stage-item is-done"><div class="loan-stage-marker"><span class="material-symbols-outlined">check</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Application Submitted</strong><span class="status success">Completed</span></div><p>Your online loan application was received successfully.</p><small>May 20, 2026 at 09:14 AM</small></div></article>
-          <article class="loan-stage-item is-current"><div class="loan-stage-marker"><span class="material-symbols-outlined">hourglass_top</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Under Review</strong><span class="status pending">In Progress</span></div><p>Your documents are under review by the admin team.</p><small>Started May 24, 2026</small></div></article>
+          <article class="loan-stage-item is-done"><div class="loan-stage-marker"><span class="material-symbols-outlined">check</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Application Submitted</strong><span class="status success">Completed</span></div><p>Your online loan application was received successfully.</p><small>Saved date at 09:14 AM</small></div></article>
+          <article class="loan-stage-item is-current"><div class="loan-stage-marker"><span class="material-symbols-outlined">hourglass_top</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Under Review</strong><span class="status pending">In Progress</span></div><p>Your documents are under review by the admin team.</p><small>Started Saved date</small></div></article>
           <article class="loan-stage-item"><div class="loan-stage-marker"><span class="material-symbols-outlined">manage_search</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Credit Checking</strong><span class="status unpaid">Waiting</span></div><p>Credit checking starts once document review is complete.</p><small>Pending</small></div></article>
           <article class="loan-stage-item"><div class="loan-stage-marker"><span class="material-symbols-outlined">rule</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Approval Decision</strong><span class="status unpaid">Waiting</span></div><p>The admin will approve or reject after review.</p><small>Pending</small></div></article>
           <article class="loan-stage-item"><div class="loan-stage-marker"><span class="material-symbols-outlined">payments</span></div><div class="loan-stage-body"><div class="loan-stage-head"><strong>Funds Release</strong><span class="status unpaid">Waiting</span></div><p>Funds will be released after approval and final confirmation.</p><small>Pending</small></div></article>
@@ -68,13 +68,13 @@
       </section>
 
       <div class="content-grid two">
-        <section class="panel"><h2>Loan Details Summary</h2><div class="profile-list"><div class="profile-row"><span>Loan Type</span><strong>Personal</strong></div><div class="profile-row"><span>Loan Amount Requested</span><strong>&#8369;10,000</strong></div><div class="profile-row"><span>Loan Term</span><strong>6 months</strong></div><div class="profile-row"><span>Monthly Payment Estimate</span><strong>&#8369;1,780</strong></div><div class="profile-row"><span>Interest Rate</span><strong>4.5% APR</strong></div><div class="profile-row"><span>Payment Schedule</span><strong>Monthly</strong></div></div></section>
+        <section class="panel"><h2>Loan Details Summary</h2><div class="profile-list"><div class="profile-row"><span>Loan Type</span><strong>Personal</strong></div><div class="profile-row"><span>Loan Amount Requested</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Loan Term</span><strong>6 months</strong></div><div class="profile-row"><span>Monthly Payment Estimate</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Interest Rate</span><strong>4.5% APR</strong></div><div class="profile-row"><span>Payment Schedule</span><strong>Monthly</strong></div></div></section>
         <section class="panel"><h2>Admin Remarks</h2><div class="notice-list"><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">info</span></div><div><strong>Your documents are under review</strong><p>Please wait while the admin validates your submitted ID and income files.</p></div></article><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">upload_file</span></div><div><strong>Possible follow-up</strong><p>If the valid ID is unclear, you may be asked to upload it again.</p></div></article></div></section>
       </div>
 
       <div class="content-grid two">
         <section class="panel"><h2>Document Status</h2><div class="profile-list"><div class="profile-row"><span>Valid ID</span><strong><span class="status success">Approved</span></strong></div><div class="profile-row"><span>Proof of Income</span><strong><span class="status pending">Pending</span></strong></div><div class="profile-row"><span>Selfie Verification</span><strong><span class="status success">Approved</span></strong></div></div></section>
-        <section class="panel"><h2>Payment Status</h2><div class="profile-list"><div class="profile-row"><span>Total Loan Amount</span><strong>&#8369;10,000</strong></div><div class="profile-row"><span>Paid Amount</span><strong>&#8369;0</strong></div><div class="profile-row"><span>Remaining Balance</span><strong>&#8369;10,000</strong></div><div class="profile-row"><span>Next Due Date</span><strong>After release</strong></div><div class="profile-row"><span>Overdue Status</span><strong><span class="status success">None</span></strong></div></div></section>
+        <section class="panel"><h2>Payment Status</h2><div class="profile-list"><div class="profile-row"><span>Total Loan Amount</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Paid Amount</span><strong>0</strong></div><div class="profile-row"><span>Remaining Balance</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Next Due Date</span><strong>After release</strong></div><div class="profile-row"><span>Overdue Status</span><strong><span class="status success">None</span></strong></div></div></section>
       </div>
 
       <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="loan-form.html"><span class="material-symbols-outlined">edit_document</span>Edit Application</a><a class="action-tile" href="loans.html"><span class="material-symbols-outlined">cancel</span>Cancel Application</a><a class="action-tile" href="../support/ticket.html"><span class="material-symbols-outlined">support_agent</span>Contact Admin</a><a class="action-tile" href="../support/live-chat.html"><span class="material-symbols-outlined">forum</span>Chat Support</a><a class="action-tile" href="../support/faq.html"><span class="material-symbols-outlined">quiz</span>FAQ Help</a></div></section>

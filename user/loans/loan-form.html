@@ -48,16 +48,16 @@
             <section class="form-section">
               <h2>Personal Information</h2>
               <div class="form-grid two">
-                <label class="field"><span>Full Name</span><input type="text" value="Lance Navarro" required></label>
-                <label class="field"><span>Email Address</span><input type="email" value="lance@example.com" required></label>
-                <label class="field"><span>Phone Number</span><input type="tel" value="+63 912 345 6789" required></label>
-                <label class="field"><span>Date of Birth</span><input type="date" value="1998-04-12" required></label>
+                <label class="field"><span>Full Name</span><input type="text" name="name" data-user-input="name" placeholder="Full name" required></label>
+                <label class="field"><span>Email Address</span><input type="email" name="email" data-user-input="email" placeholder="you@gmail.com" required></label>
+                <label class="field"><span>Phone Number</span><input type="tel" name="contact" data-user-input="contact" placeholder="+63 912 345 6789" required></label>
+                <label class="field"><span>Date of Birth</span><input type="date" name="birthDate" data-user-input="birthDate" required></label>
                 <label class="field"><span>Gender</span><select required><option>Male</option><option>Female</option><option>Prefer not to say</option></select></label>
                 <label class="field"><span>Civil Status</span><select required><option>Single</option><option>Married</option><option>Separated</option><option>Widowed</option></select></label>
-                <label class="field"><span>Street</span><input type="text" value="123 Mabini Street" required></label>
-                <label class="field"><span>Barangay</span><input type="text" value="Barangay 48" required></label>
-                <label class="field"><span>City</span><input type="text" value="Manila" required></label>
-                <label class="field"><span>Province</span><input type="text" value="Metro Manila" required></label>
+                <label class="field"><span>Street</span><input type="text" name="street" data-user-input="street" placeholder="Street" required></label>
+                <label class="field"><span>Barangay</span><input type="text" name="barangay" data-user-input="barangay" placeholder="Barangay" required></label>
+                <label class="field"><span>City</span><input type="text" name="city" data-user-input="city" placeholder="City" required></label>
+                <label class="field"><span>Province</span><input type="text" name="province" data-user-input="province" placeholder="Province" required></label>
                 <label class="field full-span"><span>Valid ID Upload</span><input type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
               </div>
             </section>
@@ -66,21 +66,21 @@
               <h2>Employment / Income Details</h2>
               <div class="form-grid two">
                 <label class="field"><span>Employment Status</span><select required><option>Employed</option><option>Self-employed</option><option>Unemployed</option></select></label>
-                <label class="field"><span>Employer Name / Business Name</span><input type="text" value="Navarro Trading" required></label>
-                <label class="field"><span>Job Position</span><input type="text" value="Operations Manager" required></label>
-                <label class="field"><span>Monthly Income</span><input type="number" value="45000" required></label>
-                <label class="field"><span>Work Address</span><input type="text" value="Makati City" required></label>
-                <label class="field"><span>Years of Employment</span><input type="number" value="4" min="0" required></label>
+                <label class="field"><span>Employer Name / Business Name</span><input type="text" name="employer" data-user-input="employer" placeholder="Employer or business name" required></label>
+                <label class="field"><span>Job Position</span><input type="text" name="jobTitle" data-user-input="jobTitle" placeholder="Job position" required></label>
+                <label class="field"><span>Monthly Income</span><input type="number" name="monthlyIncome" placeholder="Monthly income" required></label>
+                <label class="field"><span>Work Address</span><input type="text" name="workAddress" placeholder="Work address" required></label>
+                <label class="field"><span>Years of Employment</span><input type="number" name="yearsEmployed" min="0" placeholder="0" required></label>
               </div>
             </section>
 
             <section class="form-section">
               <h2>Loan Details</h2>
               <div class="form-grid two">
-                <label class="field"><span>Loan Amount Requested</span><input type="number" value="25000" required></label>
-                <label class="field"><span>Loan Purpose</span><select required><option>Business</option><option>Education</option><option>Personal</option><option>Emergency</option><option>Housing</option></select></label>
-                <label class="field"><span>Loan Term</span><select required><option>3 months</option><option selected>6 months</option><option>12 months</option></select></label>
-                <label class="field"><span>Preferred Payment Schedule</span><select required><option>Weekly</option><option>Bi-weekly</option><option selected>Monthly</option></select></label>
+                <label class="field"><span>Loan Amount Requested</span><input type="number" name="loanAmount" placeholder="Loan amount" required></label>
+                <label class="field"><span>Loan Purpose</span><select name="loanPurpose" required><option>Business</option><option>Education</option><option>Personal</option><option>Emergency</option><option>Housing</option></select></label>
+                <label class="field"><span>Loan Term</span><select name="loanTerm" required><option>3 months</option><option selected>6 months</option><option>12 months</option></select></label>
+                <label class="field"><span>Preferred Payment Schedule</span><select name="paymentSchedule" required><option>Weekly</option><option>Bi-weekly</option><option selected>Monthly</option></select></label>
               </div>
             </section>
 
@@ -88,9 +88,9 @@
               <h2>Financial Information</h2>
               <div class="form-grid two">
                 <label class="field"><span>Existing Loans?</span><select required><option>No</option><option>Yes</option></select></label>
-                <label class="field"><span>Monthly Expenses</span><input type="number" value="18000" required></label>
-                <label class="field"><span>Bank Account Number</span><input type="text" value="1234-5678-9012" required></label>
-                <label class="field"><span>Bank Name</span><input type="text" value="BDO" required></label>
+                <label class="field"><span>Monthly Expenses</span><input type="number" name="monthlyExpenses" placeholder="Monthly expenses" required></label>
+                <label class="field"><span>Bank Account Number</span><input type="text" name="bankAccount" placeholder="Bank account number" required></label>
+                <label class="field"><span>Bank Name</span><input type="text" name="bankName" placeholder="Bank name" required></label>
                 <label class="field full-span"><span>Credit Score</span><input type="number" placeholder="Optional / admin review"></label>
               </div>
             </section>
@@ -98,10 +98,10 @@
             <section class="form-section">
               <h2>Emergency Contact</h2>
               <div class="form-grid two">
-                <label class="field"><span>Full Name</span><input type="text" value="Maria Navarro" required></label>
-                <label class="field"><span>Relationship</span><input type="text" value="Mother" required></label>
-                <label class="field"><span>Phone Number</span><input type="tel" value="+63 917 222 3344" required></label>
-                <label class="field"><span>Address</span><input type="text" value="Manila, Philippines" required></label>
+                <label class="field"><span>Full Name</span><input type="text" name="emergencyName" data-user-input="emergencyName" placeholder="Emergency contact name" required></label>
+                <label class="field"><span>Relationship</span><input type="text" name="emergencyRelationship" placeholder="Relationship" required></label>
+                <label class="field"><span>Phone Number</span><input type="tel" name="emergencyPhone" placeholder="+63 917 222 3344" required></label>
+                <label class="field"><span>Address</span><input type="text" name="emergencyAddress" placeholder="Emergency contact address" required></label>
               </div>
             </section>
 
@@ -117,9 +117,9 @@
             <section class="form-section">
               <h2>Monthly Payment Preview</h2>
               <div class="payment-preview">
-                <article><span>Requested</span><strong>&#8369;25,000</strong></article>
-                <article><span>Estimated Term</span><strong>6 months</strong></article>
-                <article><span>Estimated Monthly</span><strong>&#8369;4,250</strong></article>
+                <article><span>Requested</span><strong>Enter amount</strong></article>
+                <article><span>Estimated Term</span><strong>Select term</strong></article>
+                <article><span>Estimated Monthly</span><strong>Calculated after review</strong></article>
               </div>
             </section>
 

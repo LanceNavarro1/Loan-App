@@ -38,45 +38,43 @@
           <div><p class="page-kicker">Verification files</p><h1>Documents</h1><p>Manage the files used for identity checks, loan approval, and account review.</p></div>
           <a class="btn btn-small" href="../support/support.html">Need Help?</a>
         </div>
-        <section class="loan-status-hero panel">
+        <section class="loan-status-hero panel" data-user-documents-status>
         <div class="loan-status-hero-copy">
-          <div class="loan-status-chip"><span class="material-symbols-outlined">description</span><span>Under Review</span></div>
-          <h2>My Documents</h2>
-          <p>Upload and manage your loan verification requirements. Keep every file clear, readable, and updated to avoid approval delays.</p>
+          <div class="loan-status-chip"><span class="material-symbols-outlined">description</span><span>No Documents</span></div>
+          <h2>No uploaded documents yet</h2>
+          <p>Upload document files to start verification progress.</p>
           <div class="loan-status-meta">
-            <div><span>Valid ID</span><strong>Approved</strong></div>
-            <div><span>Proof of Income</span><strong>Pending</strong></div>
-            <div><span>Selfie with ID</span><strong>Rejected</strong></div>
-            <div><span>Completion</span><strong>2 / 3</strong></div>
+            <div><span>Uploaded Files</span><strong>0</strong></div>
+            <div><span>Approved</span><strong>0</strong></div>
+            <div><span>Pending Review</span><strong>0</strong></div>
+            <div><span>Rejected</span><strong>0</strong></div>
           </div>
         </div>
         <div class="loan-status-scorecard">
-          <div class="loan-status-ring" aria-hidden="true"><div class="loan-status-ring-center"><strong>67%</strong><span>Verified</span></div></div>
-          <div class="loan-status-score-copy"><strong>Incomplete Documents</strong><p>One rejected document needs to be reuploaded before final verification.</p></div>
+          <div class="loan-status-ring" aria-hidden="true"><div class="loan-status-ring-center"><strong>0%</strong><span>Complete</span></div></div>
+          <div class="loan-status-score-copy"><strong>No document data</strong><p>The verification percentage will stay at 0% until files are uploaded.</p></div>
         </div>
       </section>
 
       <div class="content-grid two">
-        <section class="panel"><h2>Required Documents Overview</h2><div class="profile-list"><div class="profile-row"><span>Valid ID (Government Issued)</span><strong><span class="status approved">Approved</span></strong></div><div class="profile-row"><span>Proof of Income</span><strong><span class="status pending">Pending</span></strong></div><div class="profile-row"><span>Selfie with ID</span><strong><span class="status rejected">Rejected</span></strong></div><div class="profile-row"><span>Address Proof</span><strong><span class="status approved">Approved</span></strong></div><div class="profile-row"><span>Missing / Rejected</span><strong><span class="status rejected">1 file</span></strong></div></div></section>
+        <section class="panel"><h2>Required Documents Overview</h2><div class="profile-list"><div class="profile-row"><span>Uploaded Documents</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Status</span><strong><span class="status pending">For Review</span></strong></div></div></section>
         <section class="panel"><h2>Upload Document</h2><form class="form-grid" data-demo-form><label class="field"><span>Select Document Type</span><select required><option>Valid ID</option><option>Proof of Income</option><option>Selfie with ID</option><option>Utility Bill</option></select></label><label class="field"><span>Upload File</span><input type="file" accept=".jpg,.jpeg,.png,.pdf" required></label><label class="field"><span>Description</span><textarea placeholder="Optional notes for the verifier."></textarea></label><div class="form-actions"><button class="btn btn-primary" type="submit">Upload Document</button><p class="muted" data-form-message></p></div></form></section>
       </div>
 
       <section class="panel">
         <div class="page-head"><div><p class="page-kicker">Uploaded files</p><h2>Document Status List</h2><p>Review every file uploaded for your loan verification.</p></div><a class="btn btn-small" href="erification-status.html">Verification Status</a></div>
-        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Document Type</th><th>File Name</th><th>Status</th><th>Date Uploaded</th><th>Action</th></tr></thead><tbody>
-          <tr><td>Valid ID</td><td>id.jpg</td><td><span class="status approved">Approved</span></td><td>May 20, 2026</td><td><button class="btn-secondary" type="button">View</button></td></tr>
-          <tr><td>Income Proof</td><td>payslip.pdf</td><td><span class="status pending">Pending</span></td><td>May 22, 2026</td><td><button class="btn-secondary" type="button">Edit</button></td></tr>
-          <tr><td>Selfie ID</td><td>selfie.png</td><td><span class="status rejected">Rejected</span></td><td>May 22, 2026</td><td><button class="btn-secondary" type="button">Reupload</button></td></tr>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Document Type</th><th>File Name</th><th>Status</th><th>Date Uploaded</th><th>Action</th></tr></thead><tbody data-user-documents-table>
+          <tr><td colspan="5">No documents uploaded yet.</td></tr>
         </tbody></table></div>
       </section>
 
       <div class="content-grid two">
-        <section class="panel"><h2>Verification Status</h2><div class="profile-list"><div class="profile-row"><span>Status</span><strong><span class="status pending">Under Review</span></strong></div><div class="profile-row"><span>Completion</span><strong>2/3 Documents Verified</strong></div><div class="profile-row"><span>Overall Result</span><strong>Waiting for selfie verification</strong></div></div></section>
-        <section class="panel"><h2>Admin Feedback</h2><div class="notice-list"><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">info</span></div><div><strong>Please upload clearer image of your ID</strong><p>The file is readable, but the selfie verification image is blurry.</p></div></article><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">schedule</span></div><div><strong>Waiting for selfie verification</strong><p>Upload a clearer selfie with your valid ID to continue.</p></div></article></div></section>
+        <section class="panel"><h2>Verification Status</h2><div class="profile-list"><div class="profile-row"><span>Status</span><strong><span class="status pending">For Review</span></strong></div><div class="profile-row"><span>Completion</span><strong>Based on uploaded documents</strong></div><div class="profile-row"><span>Overall Result</span><strong>Waiting for admin review</strong></div></div></section>
+        <section class="panel"><h2>Admin Feedback</h2><div class="notice-list" data-user-notices><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">info</span></div><div><strong>No document feedback yet</strong><p>Admin feedback will appear here.</p></div></article></div></section>
       </div>
 
       <div class="content-grid two">
-        <section class="panel"><h2>File Preview</h2><div class="documents-file-note">Preview selected document</div><div class="payment-preview"><article><span>File</span><strong>id.jpg</strong></article><article><span>Type</span><strong>Valid ID</strong></article><article><span>Status</span><strong>Approved</strong></article></div><div class="form-actions"><button class="btn-secondary" type="button">Download</button><button class="btn-secondary" type="button">Replace File</button><button class="btn-secondary" type="button">Delete File</button></div></section>
+        <section class="panel"><h2>File Preview</h2><div class="documents-file-note">Preview selected document</div><div class="payment-preview"><article><span>File</span><strong>Loads from saved data</strong></article><article><span>Type</span><strong>Loads from saved data</strong></article><article><span>Status</span><strong>Loads from saved data</strong></article></div><div class="form-actions"><button class="btn-secondary" type="button">Download</button><button class="btn-secondary" type="button">Replace File</button><button class="btn-secondary" type="button">Delete File</button></div></section>
         <section class="panel"><h2>Upload Guidelines</h2><div class="profile-list"><div class="profile-row"><span>Clarity</span><strong>File must be clear and readable</strong></div><div class="profile-row"><span>Max Size</span><strong>5MB</strong></div><div class="profile-row"><span>Allowed Formats</span><strong>JPG, PNG, PDF</strong></div><div class="profile-row"><span>Restriction</span><strong>No edited or blurred IDs</strong></div></div></section>
       </div>
 

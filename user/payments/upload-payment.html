@@ -39,10 +39,10 @@
           <a class="btn btn-small" href="../support/support.html">Need Help?</a>
         </div>
         <section class="panel"><h2>Upload Payment Proof</h2><form class="form-grid" data-demo-form>
-        <label class="field"><span>Loan ID</span><input type="text" value="EZL-2026-018"></label>
-        <label class="field"><span>Payment Reference</span><input type="text" value="GCASH-20260524-001"></label>
-        <label class="field"><span>Amount Paid</span><input type="number" value="4250"></label>
-        <label class="field"><span>Payment Date</span><input type="date" value="2026-05-24"></label>
+        <label class="field"><span>Loan ID</span><select data-user-payment-options><option>No submitted loans yet</option></select></label>
+        <label class="field"><span>Payment Reference</span><input type="text" name="reference" placeholder="Payment reference"></label>
+        <label class="field"><span>Payment Amount</span><input type="number" name="paymentAmount" placeholder="Amount paid"></label>
+        <label class="field"><span>Payment Date</span><input type="date" name="paymentDate"></label>
         <div class="form-actions"><button class="btn btn-primary" type="submit">Submit Proof</button><a class="btn-secondary" href="../dashboard.html">Cancel</a></div><p class="muted" data-form-message></p>
       </form></section>
       </section>
