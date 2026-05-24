@@ -5,6 +5,7 @@ from . import views
 app_name = 'loans'
 
 urlpatterns = [
+    path('api/user-store/', views.user_store_api, name='user_store_api'),
     path('', views.landing, name='landing'),
     path('landing.html', views.landing, name='landing_html'),
     path('login.html', views.login_view, name='login'),
