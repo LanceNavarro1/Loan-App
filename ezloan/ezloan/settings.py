@@ -57,6 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            PROJECT_ROOT / 'templates',
             PROJECT_ROOT,
         ],
         'APP_DIRS': True,
@@ -122,6 +123,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     PROJECT_ROOT / 'static',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'loans.backends.EmailOrUsernameBackend',
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'

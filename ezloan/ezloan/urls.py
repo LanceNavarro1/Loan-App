@@ -17,9 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import include, path
+from django.shortcuts import redirect
+from django.urls import include, path, re_path
+
+
+def custom_admin_html_redirect(request, custom_admin_path):
+    query_string = request.META.get('QUERY_STRING', '')
+    target = f"/admin/{custom_admin_path}"
+    return redirect(f"{target}?{query_string}" if query_string else target)
 
 urlpatterns = [
+    re_path(r'^django-admin/(?P<custom_admin_path>.+\.html)$', custom_admin_html_redirect),
     path('django-admin/', admin.site.urls),
     path('', include('loans.urls')),
 ]
