@@ -1,6 +1,8 @@
 from pathlib import PurePosixPath
 import json
 
+from django.conf import settings
+from django.http import FileResponse
 from django.http import Http404, JsonResponse
 from django.shortcuts import redirect, render
 from django.template import TemplateDoesNotExist
@@ -108,6 +110,15 @@ def logout_view(request):
 def user_page(request, page):
     safe_page = _safe_html_path(page)
     return _render_html(request, f"user/{USER_PAGE_ALIASES.get(safe_page, safe_page)}")
+
+
+def app_icon(request):
+    icon_path = settings.PROJECT_ROOT / 'static' / 'easy-loan-icon.svg'
+
+    if not icon_path.exists():
+        raise Http404("Icon not found")
+
+    return FileResponse(icon_path.open('rb'), content_type='image/svg+xml')
 
 
 def _records_as_store():

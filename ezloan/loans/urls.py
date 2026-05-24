@@ -6,6 +6,8 @@ app_name = 'loans'
 
 urlpatterns = [
     path('api/user-store/', views.user_store_api, name='user_store_api'),
+    path('favicon.ico', views.app_icon, name='favicon'),
+    path('easy-loan-icon.svg', views.app_icon, name='app_icon'),
     path('', views.landing, name='landing'),
     path('landing.html', views.landing, name='landing_html'),
     path('login.html', views.login_view, name='login'),

@@ -13,6 +13,7 @@ const countryCodeSelects = document.querySelectorAll("[data-country-code]");
 const userSessionKey = "easyLoan.currentUserEmail";
 const userStoreKey = "easyLoan.users";
 const userStoreApi = "/api/user-store/";
+const staticAssetBase = new URL(".", document.currentScript?.src || window.location.href);
 let userStoreSyncTimer = null;
 const countryMeta = {
   ar: ["Argentina", "+54", "ar"],
@@ -70,6 +71,25 @@ const readUserStore = () => {
   } catch (error) {
     return {};
   }
+};
+
+const installAppIcon = () => {
+  const iconUrl = new URL("easy-loan-icon.svg", staticAssetBase).href;
+
+  document.querySelectorAll("link[rel~='icon'], link[rel='shortcut icon'], link[rel='apple-touch-icon']").forEach((link) => {
+    link.remove();
+  });
+
+  const iconLink = document.createElement("link");
+  iconLink.rel = "icon";
+  iconLink.type = "image/svg+xml";
+  iconLink.href = iconUrl;
+  document.head.append(iconLink);
+
+  const shortcutLink = document.createElement("link");
+  shortcutLink.rel = "shortcut icon";
+  shortcutLink.href = iconUrl;
+  document.head.append(shortcutLink);
 };
 
 const writeUserStore = (store) => {
@@ -2332,6 +2352,7 @@ if (dashboardPanels.length) {
   });
 }
 
+installAppIcon();
 renderUserData();
 renderAdminData();
 loadUserStoreFromServer();

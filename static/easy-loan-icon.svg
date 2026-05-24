@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Easy Loan logo">
+  <rect width="64" height="64" rx="16" fill="#007a52"/>
+  <circle cx="48" cy="16" r="8" fill="#f5c542"/>
+  <path d="M14 29h36L32 17 14 29Z" fill="#ffffff"/>
+  <path d="M18 31h28v5H18v-5Z" fill="#d9fff0"/>
+  <path d="M21 38h4v10h-4V38Zm9 0h4v10h-4V38Zm9 0h4v10h-4V38Z" fill="#ffffff"/>
+  <path d="M16 50h32v5H16v-5Z" fill="#d9fff0"/>
+  <path d="M14 56h36" stroke="#f5c542" stroke-width="3" stroke-linecap="round"/>
+</svg>
