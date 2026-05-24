@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="auth-screen admin-page" data-page="login" data-admin-depth="0">
+  <section class="auth-card">
+    <a class="brand" href="index.html"><span class="brand-mark">EL</span><div><h1>Easy Loan Admin</h1><p>Secure access</p></div></a>
+    <h2>Admin Login</h2>
+    <p>Enter your admin credentials to continue to the dashboard.</p>
+    <form class="form-grid" data-login-form data-redirect="dashboard.html">
+      <label class="field"><span>Email</span><input type="email" value="admin@easyloan.test" required></label>
+      <label class="field"><span>Password</span><input type="password" value="admin123" required></label>
+      <button class="btn" type="submit">Sign In</button>
+    </form>
+  </section>
+  <script src="../static/script.js"></script>
+</body>
+</html>

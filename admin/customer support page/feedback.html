@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Easy Loan Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body class="support-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Support navigation">
+      <a href="support-tickets.html">Tickets</a>
+      <a href="live-chat.html">Chat</a>
+      <a href="customer-concerns.html">Concerns</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="../user/notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../user/dashboard.html">Account</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="support-sidebar" aria-label="Support sections">
+          <a class="" href="support-tickets.html"><span class="material-symbols-outlined">support_agent</span>Support Tickets</a>
+          <a class="" href="live-chat.html"><span class="material-symbols-outlined">quickreply</span>Live Chat</a>
+          <a class="" href="customer-concerns.html"><span class="material-symbols-outlined">report</span>Customer Concerns</a>
+          <a class="active" href="feedback.html"><span class="material-symbols-outlined">rate_review</span>Feedback</a>
+          <a class="" href="ticket-details.html"><span class="material-symbols-outlined">assignment</span>Ticket Details</a>
+        </aside>
+      <section class="user-content">
+        <section class="support-hero">
+          <div class="support-hero-panel">
+            <p class="page-kicker">Customer voice</p>
+            <h1>Feedback</h1>
+            <p>Collect feedback about the Easy Loan process and route improvements to the admin team.</p>
+          </div>
+          <section class="panel support-status-panel">
+            <h2>Support Summary</h2>
+            <div class="profile-list">
+              <div class="profile-row"><span>Open tickets</span><strong>24</strong></div>
+              <div class="profile-row"><span>Average first response</span><strong>8 minutes</strong></div>
+              <div class="profile-row"><span>Escalations today</span><strong>3</strong></div>
+            </div>
+          </section>
+        </section>
+        <div class="content-grid two">
+          <section class="panel">
+          <h2>Record Feedback</h2>
+          <form class="form-grid" data-demo-form>
+            <label class="field"><span>Customer Name</span><input type="text" value="Lance Navarro"></label>
+            <label class="field"><span>Concern Type</span><select><option>Payment issue</option><option>Loan application</option><option>Document verification</option><option>Account access</option></select></label>
+            <label class="field"><span>Priority</span><select><option>Normal</option><option>High</option><option>Urgent</option></select></label>
+            <label class="field"><span>Message</span><textarea>Customer needs help confirming the latest loan payment.</textarea></label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Submit</button>
+              <a class="btn-secondary" href="support-tickets.html">View Tickets</a>
+            </div>
+            <p class="muted" data-form-message></p>
+          </form>
+        </section>
+          <section class="panel"><h2>Recent Feedback</h2><div class="notice-list"><article class="notice-card"><div class="icon-badge green"><span class="material-symbols-outlined">sentiment_satisfied</span></div><div><strong>Fast approval</strong><p>Customer liked the clear application status and quick review.</p></div></article><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">tips_and_updates</span></div><div><strong>Improve uploads</strong><p>Customer requested clearer document upload instructions.</p></div></article></div></section>
+        </div>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="support-tickets.html"><span class="material-symbols-outlined">confirmation_number</span><span>Tickets</span></a>
+    <a href="live-chat.html"><span class="material-symbols-outlined">forum</span><span>Chat</span></a>
+    <a href="customer-concerns.html"><span class="material-symbols-outlined">report</span><span>Concerns</span></a>
+    <a href="feedback.html"><span class="material-symbols-outlined">rate_review</span><span>Feedback</span></a>
+    <a href="../user/dashboard.html"><span class="material-symbols-outlined">person</span><span>Account</span></a>
+  </nav>
+  <script src="../../../static/script.js"></script>
+</body>
+</html>
+

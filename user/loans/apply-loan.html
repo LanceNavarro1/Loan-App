@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Loan - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
+        <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="../notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+        <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
+        <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+      <section class="user-content">
+        <div class="page-head">
+          <div><p class="page-kicker">New application</p><h1>Apply Loan</h1><p>Submit a loan request with amount, purpose, terms, and supporting details.</p></div>
+          <a class="btn btn-small" href="../support/support.html">Need Help?</a>
+        </div>
+        <section class="panel">
+          <div class="application-progress" aria-label="Application progress">
+            <span>Step 1 - Borrower Details</span>
+            <span>Step 2 - Loan Review</span>
+            <span>Step 3 - Submit</span>
+          </div>
+          <form class="loan-application-form" data-demo-form>
+            <section class="form-section">
+              <h2>Personal Information</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Full Name</span><input type="text" value="Lance Navarro" required></label>
+                <label class="field"><span>Email Address</span><input type="email" value="lance@example.com" required></label>
+                <label class="field"><span>Phone Number</span><input type="tel" value="+63 912 345 6789" required></label>
+                <label class="field"><span>Date of Birth</span><input type="date" value="1998-04-12" required></label>
+                <label class="field"><span>Gender</span><select required><option>Male</option><option>Female</option><option>Prefer not to say</option></select></label>
+                <label class="field"><span>Civil Status</span><select required><option>Single</option><option>Married</option><option>Separated</option><option>Widowed</option></select></label>
+                <label class="field"><span>Street</span><input type="text" value="123 Mabini Street" required></label>
+                <label class="field"><span>Barangay</span><input type="text" value="Barangay 48" required></label>
+                <label class="field"><span>City</span><input type="text" value="Manila" required></label>
+                <label class="field"><span>Province</span><input type="text" value="Metro Manila" required></label>
+                <label class="field full-span"><span>Valid ID Upload</span><input type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Employment / Income Details</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Employment Status</span><select required><option>Employed</option><option>Self-employed</option><option>Unemployed</option></select></label>
+                <label class="field"><span>Employer Name / Business Name</span><input type="text" value="Navarro Trading" required></label>
+                <label class="field"><span>Job Position</span><input type="text" value="Operations Manager" required></label>
+                <label class="field"><span>Monthly Income</span><input type="number" value="45000" required></label>
+                <label class="field"><span>Work Address</span><input type="text" value="Makati City" required></label>
+                <label class="field"><span>Years of Employment</span><input type="number" value="4" min="0" required></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Loan Details</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Loan Amount Requested</span><input type="number" value="25000" required></label>
+                <label class="field"><span>Loan Purpose</span><select required><option>Business</option><option>Education</option><option>Personal</option><option>Emergency</option><option>Housing</option></select></label>
+                <label class="field"><span>Loan Term</span><select required><option>3 months</option><option selected>6 months</option><option>12 months</option></select></label>
+                <label class="field"><span>Preferred Payment Schedule</span><select required><option>Weekly</option><option>Bi-weekly</option><option selected>Monthly</option></select></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Financial Information</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Existing Loans?</span><select required><option>No</option><option>Yes</option></select></label>
+                <label class="field"><span>Monthly Expenses</span><input type="number" value="18000" required></label>
+                <label class="field"><span>Bank Account Number</span><input type="text" value="1234-5678-9012" required></label>
+                <label class="field"><span>Bank Name</span><input type="text" value="BDO" required></label>
+                <label class="field full-span"><span>Credit Score</span><input type="number" placeholder="Optional / admin review"></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Emergency Contact</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Full Name</span><input type="text" value="Maria Navarro" required></label>
+                <label class="field"><span>Relationship</span><input type="text" value="Mother" required></label>
+                <label class="field"><span>Phone Number</span><input type="tel" value="+63 917 222 3344" required></label>
+                <label class="field"><span>Address</span><input type="text" value="Manila, Philippines" required></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Required Documents</h2>
+              <div class="form-grid two">
+                <label class="field"><span>Government ID</span><input type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+                <label class="field"><span>Proof of Income</span><input type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+                <label class="field full-span"><span>Selfie with ID</span><input type="file" accept=".jpg,.jpeg,.png"></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Monthly Payment Preview</h2>
+              <div class="payment-preview">
+                <article><span>Requested</span><strong>&#8369;25,000</strong></article>
+                <article><span>Estimated Term</span><strong>6 months</strong></article>
+                <article><span>Estimated Monthly</span><strong>&#8369;4,250</strong></article>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Agreement</h2>
+              <div class="agreement-list">
+                <label><input type="checkbox" required><span>I certify that all information is true.</span></label>
+                <label><input type="checkbox" required><span>I agree to the terms and conditions.</span></label>
+                <label><input type="checkbox" required><span>I authorize credit checking.</span></label>
+              </div>
+              <div class="submit-section">
+                <button class="btn btn-primary" type="submit">Submit Application</button>
+                <button class="btn-secondary" type="button">Save as Draft</button>
+                <button class="btn-secondary" type="reset">Reset Form</button>
+                <p class="muted" data-form-message></p>
+              </div>
+            </section>
+          </form>
+        </section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

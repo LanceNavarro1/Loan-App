@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Staff - Easy Loan Staff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body class="staff-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Staff navigation">
+      <a class="" href="staff.html">Staff</a>
+      <a class="" href="admin-list.html">Admins</a>
+      <a class="" href="roles-permissions.html">Roles</a>
+      <a class="" href="staff-activity.html">Activity</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications/notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../Admin/dashboard.html">Admin</a>
+    </div>
+  </header>
+  <main class="user-shell"><div class="user-layout"><aside class="management-nav" aria-label="Staff sections">
+          <a class="" href="staff.html"><span class="material-symbols-outlined">groups</span>Staff</a>
+          <a class="" href="admin-list.html"><span class="material-symbols-outlined">admin_panel_settings</span>Admins</a>
+          <a class="" href="add-staff.html"><span class="material-symbols-outlined">person_add</span>Add Staff</a>
+          <a class="active" href="edit-staff.html"><span class="material-symbols-outlined">manage_accounts</span>Edit Staff</a>
+          <a class="" href="roles-permissions.html"><span class="material-symbols-outlined">rule</span>Roles</a>
+          <a class="" href="staff-activity.html"><span class="material-symbols-outlined">history</span>Activity</a>
+        </aside><section class="user-content"><section class="management-hero">
+          <div class="management-hero-copy"><p class="page-kicker">Profile update</p><h1>Edit Staff</h1><p>Update staff information, assignment, and access level.</p></div>
+          <section class="panel"><h2>Team Overview</h2><div class="profile-list"><div class="profile-row"><span>Active staff</span><strong>42</strong></div><div class="profile-row"><span>Admins</span><strong>12</strong></div><div class="profile-row"><span>Open assignments</span><strong>18</strong></div></div></section>
+        </section><div class="content-grid two"><section class="panel"><h2>Edit Staff Account</h2><form class="form-grid" data-demo-form>
+            <label class="field"><span>Full Name</span><input type="text" value="Lance Navarro"></label>
+            <label class="field"><span>Email</span><input type="email" value="lance@easyloan.test"></label>
+            <label class="field"><span>Role</span><select><option>Loan Reviewer</option><option>Support Agent</option><option>Collections</option><option>Admin</option></select></label>
+            <label class="field"><span>Department</span><input type="text" value="Loan Operations"></label>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Staff</button><a class="btn-secondary" href="staff.html">Back to Staff</a></div><p class="muted" data-form-message></p>
+          </form></section><section class="panel"><div class="page-head"><div><p class="page-kicker">Audit</p><h2>Recent Staff Activity</h2><p>Operational actions recorded across the Easy Loan system.</p></div><a class="btn btn-small" href="staff.html">Staff List</a></div><div class="notification-log-list">
+            <article class="notification-log-item"><span class="material-symbols-outlined">fact_check</span><div><strong>Loan application reviewed</strong><span>Lance approved EZL-2026-018 after document check.</span></div><time>May 24, 2026 6:20 PM</time></article>
+            <article class="notification-log-item"><span class="material-symbols-outlined">support_agent</span><div><strong>Support ticket resolved</strong><span>Mia closed SUP-2026-098.</span></div><time>May 24, 2026 5:48 PM</time></article>
+            <article class="notification-log-item"><span class="material-symbols-outlined">payments</span><div><strong>Payment confirmed</strong><span>Ramon matched PAY-3001 to borrower account.</span></div><time>May 24, 2026 4:05 PM</time></article>
+          </div></section></div></section></div></main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="staff.html"><span class="material-symbols-outlined">groups</span><span>Staff</span></a>
+    <a href="admin-list.html"><span class="material-symbols-outlined">admin_panel_settings</span><span>Admins</span></a>
+    <a href="add-staff.html"><span class="material-symbols-outlined">person_add</span><span>Add</span></a>
+    <a href="roles-permissions.html"><span class="material-symbols-outlined">rule</span><span>Roles</span></a>
+    <a href="staff-activity.html"><span class="material-symbols-outlined">history</span><span>Activity</span></a>
+  </nav>
+  <script src="../../../static/script.js"></script>
+</body>
+</html>
+

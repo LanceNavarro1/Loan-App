@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Verification - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="admin-page" data-page="borrower verification" data-admin-depth="1">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../dashboard.html">
+        <span class="brand-mark">EL</span>
+        <div><h1>Easy Loan Admin</h1><p>Control room</p></div>
+      </a>
+      <nav class="nav" aria-label="Admin navigation"></nav>
+    </aside>
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">borrower verification page</p>
+          <h2>Document Verification</h2>
+          <p>Manage document verification records for the Easy Loan admin system.</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="../dashboard.html">Dashboard</a>
+          <button class="btn" type="button" data-action="Document Verification action ready for backend integration.">Admin Action</button>
+        </div>
+      </section>
+      <div class="content-grid">
+        <section class="panel">
+          <h3>Document Verification</h3>
+          <form class="form-grid" data-demo-form>
+            <label class="field"><span>Reference ID</span><input type="text" value="EZL-2026-018"></label>
+            <label class="field"><span>Borrower Name</span><input type="text" value="Lance Navarro"></label>
+            <label class="field"><span>Amount</span><input type="text" value="25000"></label>
+            <label class="field"><span>Admin Notes</span><input type="text" value="Ready for review"></label>
+            <div class="actions">
+              <button class="btn" type="submit">Save</button>
+              <button class="btn secondary" type="button" data-action="Draft saved locally for backend integration.">Save Draft</button>
+            </div>
+          </form>
+        </section>
+        <section class="panel">
+          <h3>Priority Queue</h3>
+          <div class="admin-filter-tabs" data-filter-tabs>
+            <button class="is-active" type="button" data-filter-button="all">All</button>
+            <button type="button" data-filter-button="urgent">Urgent</button>
+            <button type="button" data-filter-button="review">Review</button>
+            <button type="button" data-filter-button="done">Done</button>
+          </div>
+          <div class="admin-task-list" data-filter-list>
+            <article data-filter-item="review"><strong>Review</strong><span>Complete document verification checklist</span><button class="btn secondary" type="button" data-action="Review opened.">Open</button></article>
+            <article data-filter-item="urgent"><strong>Compliance</strong><span>Validate uploaded documents and profile data</span><button class="btn secondary" type="button" data-action="Compliance opened.">Open</button></article>
+            <article data-filter-item="done"><strong>Decision</strong><span>Submit admin action for backend processing</span><button class="btn secondary" type="button" data-action="Decision opened.">Open</button></article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

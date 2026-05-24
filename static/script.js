@@ -342,32 +342,96 @@ demoForms.forEach((form) => {
   });
 });
 
+document.addEventListener("submit", (event) => {
+  const form = event.target.closest("[data-demo-form]");
+
+  if (!form) {
+    return;
+  }
+
+  event.preventDefault();
+  const message = form.querySelector("[data-form-message]");
+
+  if (message) {
+    message.textContent = "Saved. This demo page is connected and ready for backend integration.";
+  }
+});
+
 // Dashboard in-page navigation
 const dashboardViewLinks = document.querySelectorAll("[data-dashboard-view]");
 const dashboardPanels = document.querySelectorAll("[data-dashboard-panel]");
+const dashboardRemotePanel = document.querySelector("[data-dashboard-remote-panel]");
+const dashboardRemoteContent = document.querySelector("[data-dashboard-remote-content]");
+
+const activateDashboardPanel = (view, updateHash = true) => {
+  dashboardPanels.forEach((panel) => {
+    const isActive = panel.dataset.dashboardPanel === view;
+    panel.hidden = !isActive;
+    panel.classList.toggle("is-active", isActive);
+  });
+
+  dashboardViewLinks.forEach((link) => {
+    link.classList.toggle("active", link.dataset.dashboardView === view);
+  });
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${view}`);
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const loadDashboardRemote = async (link, updateHash = true) => {
+  if (!dashboardRemotePanel || !dashboardRemoteContent) {
+    return false;
+  }
+
+  const view = link.dataset.dashboardView;
+  const remotePath = link.dataset.dashboardRemote;
+
+  if (!view || !remotePath) {
+    return false;
+  }
+
+  dashboardRemotePanel.dataset.dashboardPanel = view;
+  dashboardRemoteContent.innerHTML = `<section class="panel detail-panel"><h2>Loading ${link.textContent.trim()}...</h2></section>`;
+  activateDashboardPanel(view, updateHash);
+
+  try {
+    const response = await fetch(remotePath, { cache: "no-cache" });
+
+    if (!response.ok) {
+      throw new Error(`Unable to load ${remotePath}`);
+    }
+
+    const html = await response.text();
+    const parsedPage = new DOMParser().parseFromString(html, "text/html");
+    const pageContent = parsedPage.querySelector(".user-content");
+
+    dashboardRemoteContent.innerHTML = pageContent
+      ? pageContent.innerHTML
+      : `<section class="panel detail-panel"><h2>${link.textContent.trim()}</h2>${parsedPage.body.innerHTML}</section>`;
+  } catch (error) {
+    dashboardRemoteContent.innerHTML = `<section class="panel detail-panel"><h2>${link.textContent.trim()}</h2><p class="muted">This section could not load inside the dashboard. Open the page directly below.</p><a class="btn btn-primary" href="${remotePath}">Open Page</a></section>`;
+  }
+
+  return true;
+};
 
 const setDashboardPanel = (view, updateHash = true) => {
   if (!dashboardPanels.length) {
     return;
   }
 
-  const nextView = [...dashboardPanels].some((panel) => panel.dataset.dashboardPanel === view) ? view : "dashboard";
+  const remoteLink = [...dashboardViewLinks].find((link) => link.dataset.dashboardView === view && link.dataset.dashboardRemote);
 
-  dashboardPanels.forEach((panel) => {
-    const isActive = panel.dataset.dashboardPanel === nextView;
-    panel.hidden = !isActive;
-    panel.classList.toggle("is-active", isActive);
-  });
-
-  dashboardViewLinks.forEach((link) => {
-    link.classList.toggle("active", link.dataset.dashboardView === nextView);
-  });
-
-  if (updateHash) {
-    history.replaceState(null, "", `#${nextView}`);
+  if (remoteLink) {
+    loadDashboardRemote(remoteLink, updateHash);
+    return;
   }
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  const nextView = [...dashboardPanels].some((panel) => panel.dataset.dashboardPanel === view) ? view : "dashboard";
+  activateDashboardPanel(nextView, updateHash);
 };
 
 dashboardViewLinks.forEach((link) => {
@@ -378,6 +442,11 @@ dashboardViewLinks.forEach((link) => {
     }
 
     event.preventDefault();
+    if (link.dataset.dashboardRemote) {
+      loadDashboardRemote(link);
+      return;
+    }
+
     setDashboardPanel(view);
   });
 });
@@ -414,5 +483,102 @@ const setStatusFilter = (filter) => {
 statusFilterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setStatusFilter(button.dataset.statusFilter || "all");
+  });
+});
+
+// Admin demo interactions
+const adminActionButtons = document.querySelectorAll(".admin-page [data-action]");
+const adminSearchFields = document.querySelectorAll(".admin-page [data-search]");
+const adminFilterGroups = document.querySelectorAll(".admin-page [data-filter-tabs]");
+const adminSidebarItems = [
+  ["Dashboard", "dashboard.html"],
+  ["Users", "user management/users.html"],
+  ["Borrower Verification", "barrower verification page/kyc-verification.html"],
+  ["Loan Applications", "loan application page/loan-applications.html"],
+  ["Approved Loans", "loan application page/approved-loans.html"],
+  ["Rejected Loans", "loan application page/loan-rejected.html"],
+  ["Loan Plans", "loan plans management/loan-plans.html"],
+  ["Payments", "Payments Management/payments.html"],
+  ["Payment History", "Payments Management/payment-history.html"],
+  ["Overdue Accounts", "Payments Management/overdue-payments.html"],
+  ["Documents", "barrower verification page/documents.html"],
+  ["Reports", "reports and analytics/reports.html"],
+  ["Analytics", "analytics.html"],
+  ["Activity Logs", "activity-logs.html"],
+  ["Statistics", "statistics.html"],
+  ["Logout", "logout.html"],
+];
+
+const showAdminToast = (message) => {
+  let toast = document.querySelector(".admin-toast");
+
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "admin-toast";
+    document.body.append(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.add("show");
+  window.setTimeout(() => toast.classList.remove("show"), 2200);
+};
+
+adminActionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    showAdminToast(button.dataset.action || "Action ready for backend integration.");
+  });
+});
+
+adminSearchFields.forEach((input) => {
+  const target = document.querySelector(input.dataset.search);
+
+  input.addEventListener("input", () => {
+    const value = input.value.trim().toLowerCase();
+
+    target?.querySelectorAll("tbody tr, .list li").forEach((row) => {
+      row.style.display = row.textContent.toLowerCase().includes(value) ? "" : "none";
+    });
+  });
+});
+
+document.querySelectorAll(".admin-page .nav").forEach((nav) => {
+  const depth = Number(document.body.dataset.adminDepth || 0);
+  const prefix = depth > 0 ? `${"../".repeat(depth)}` : "";
+
+  nav.innerHTML = adminSidebarItems
+    .map(([label, href]) => `<a href="${prefix}${href}">${label}</a>`)
+    .join("");
+});
+
+document.querySelectorAll(".admin-page .nav a").forEach((link) => {
+  const pageName = document.body.dataset.page;
+  const linkName = link.textContent.trim().toLowerCase();
+  const isActive = pageName === linkName || linkName.includes(pageName) || pageName.includes(linkName);
+  link.classList.toggle("active", isActive);
+});
+
+document.querySelectorAll(".admin-page table").forEach((table) => {
+  const headings = [...table.querySelectorAll("thead th")].map((heading) => heading.textContent.trim());
+
+  table.querySelectorAll("tbody tr").forEach((row) => {
+    row.querySelectorAll("td").forEach((cell, index) => {
+      cell.dataset.label = headings[index] || "";
+    });
+  });
+});
+
+adminFilterGroups.forEach((group) => {
+  const list = group.parentElement?.querySelector("[data-filter-list]");
+  const buttons = group.querySelectorAll("[data-filter-button]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filterButton || "all";
+
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      list?.querySelectorAll("[data-filter-item]").forEach((item) => {
+        item.classList.toggle("is-hidden", filter !== "all" && item.dataset.filterItem !== filter);
+      });
+    });
   });
 });

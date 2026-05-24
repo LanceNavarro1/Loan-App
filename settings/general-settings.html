@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Settings - Easy Loan Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="settings-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Settings navigation">
+      <a class="" href="settings.html">Settings</a>
+      <a class="" href="loan-settings.html">Loans</a>
+      <a class="" href="payment-settings.html">Payments</a>
+      <a class="" href="theme-settings.html">Theme</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications/notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../Admin/dashboard.html">Admin</a>
+    </div>
+  </header>
+  <main class="user-shell"><div class="user-layout"><aside class="management-nav" aria-label="Settings sections">
+          <a class="" href="settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+          <a class="active" href="general-settings.html"><span class="material-symbols-outlined">tune</span>General</a>
+          <a class="" href="system-settings.html"><span class="material-symbols-outlined">dns</span>System</a>
+          <a class="" href="company-profile.html"><span class="material-symbols-outlined">apartment</span>Company</a>
+          <a class="" href="loan-settings.html"><span class="material-symbols-outlined">request_quote</span>Loans</a>
+          <a class="" href="payment-settings.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+          <a class="" href="email-settings.html"><span class="material-symbols-outlined">mail</span>Email</a>
+          <a class="" href="sms-settings.html"><span class="material-symbols-outlined">sms</span>SMS</a>
+          <a class="" href="theme-settings.html"><span class="material-symbols-outlined">palette</span>Theme</a>
+        </aside><section class="user-content"><section class="management-hero">
+          <div class="management-hero-copy"><p class="page-kicker">Platform defaults</p><h1>General Settings</h1><p>Set language, timezone, account defaults, and operating preferences.</p></div>
+          <section class="panel"><h2>Configuration Health</h2><div class="profile-list"><div class="profile-row"><span>Active modules</span><strong>9</strong></div><div class="profile-row"><span>Last updated</span><strong>May 24, 2026</strong></div><div class="profile-row"><span>Status</span><strong>Ready</strong></div></div></section>
+        </section><div class="content-grid two"><section class="panel"><h2>General Configuration</h2><form class="form-grid" data-demo-form>
+            <label class="field"><span>Default Timezone</span><input type="text" value="Asia/Manila"></label>
+            <label class="field"><span>Default Currency</span><input type="text" value="PHP"></label>
+            <label class="field"><span>Support Hours</span><input type="text" value="8:00 AM - 6:00 PM"></label>
+            <label class="field"><span>Language</span><input type="text" value="English"></label>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Settings</button><button class="btn-secondary" type="button">Reset</button></div><p class="muted" data-form-message></p>
+          </form></section><section class="panel"><h2>General Switches</h2><div class="toggle-row"><div><strong>Borrower registration</strong><p class="muted">Allow new borrower accounts.</p></div><label class="toggle"><input type="checkbox" checked><span></span></label></div><div class="toggle-row"><div><strong>Application intake</strong><p class="muted">Accept new loan applications.</p></div><label class="toggle"><input type="checkbox" checked><span></span></label></div></section></div></section></div></main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="settings.html"><span class="material-symbols-outlined">settings</span><span>Home</span></a>
+    <a href="loan-settings.html"><span class="material-symbols-outlined">request_quote</span><span>Loans</span></a>
+    <a href="payment-settings.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="email-settings.html"><span class="material-symbols-outlined">mail</span><span>Email</span></a>
+    <a href="theme-settings.html"><span class="material-symbols-outlined">palette</span><span>Theme</span></a>
+  </nav>
+  <script src="../static/script.js"></script>
+</body>
+</html>

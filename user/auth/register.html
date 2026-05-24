@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="login-page">
+  <main class="login-page-wrap">
+    <section class="login-panel">
+      <div class="login-brand-lockup"><a class="brand login-brand" href="../../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a><p>User Access</p></div>
+      <h2>Create Account</h2>
+      <p class="login-copy">Set up your borrower profile so you can apply for loans and track payments.</p>
+      <form class="form-grid login-form" data-register-form data-redirect="../dashboard.html">
+        <label class="field login-field"><span>Full Name</span><span class="input-with-icon"><span class="material-symbols-outlined">mail</span><input type="text" value="Lance Navarro" required></span></label>
+        <label class="field login-field"><span>Gmail Address</span><span class="input-with-icon"><span class="material-symbols-outlined">mail</span><input type="email" value="lance@example.com" required></span></label>
+        <label class="field login-field"><span>Contact Number</span><span class="input-with-icon"><span class="material-symbols-outlined">mail</span><input type="text" value="+63 912 345 6789" required></span></label>
+        <label class="field login-field"><span>Password</span><span class="input-with-icon"><span class="material-symbols-outlined">lock</span><input type="password" value="" required></span></label>
+        <button class="btn btn-primary btn-block" type="submit">Create Account</button>
+        <p class="muted" data-form-message></p>
+      </form>
+      <p class="login-switch"><a href="login.html">Back to login</a></p>
+    </section>
+  </main>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

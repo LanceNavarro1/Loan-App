@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
+        <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="../notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+        <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
+        <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+      <section class="user-content">
+        <div class="page-head">
+          <div><p class="page-kicker">Support request</p><h1>Ticket</h1><p>Create or review a support ticket for borrower concerns.</p></div>
+          <a class="btn btn-small" href="../support/support.html">Need Help?</a>
+        </div>
+        <section class="panel"><h2>Create Support Ticket</h2><form class="form-grid" data-demo-form>
+        <label class="field"><span>Subject</span><input type="text" value="Payment confirmation"></label>
+        <label class="field"><span>Loan ID</span><input type="text" value="EZL-2026-018"></label>
+        <label class="field"><span>Priority</span><input type="text" value="Normal"></label>
+        <label class="field"><span>Message</span><input type="text" value="Please review my payment upload."></label>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Submit Ticket</button><a class="btn-secondary" href="../dashboard.html">Cancel</a></div><p class="muted" data-form-message></p>
+      </form></section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

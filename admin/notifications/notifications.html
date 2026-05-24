@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - Easy Loan Notifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body class="notification-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Notification navigation">
+      <a class="active" href="notifications.html">Center</a>
+      <a class="" href="announcement.html">Announce</a>
+      <a class="" href="reminders.html">Reminders</a>
+      <a class="" href="notification-logs.html">Logs</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button has-alert" href="notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../Admin/dashboard.html">Admin</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="notification-nav" aria-label="Notification sections">
+          <a class="active" href="notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+          <a class="" href="announcement.html"><span class="material-symbols-outlined">campaign</span>Announcement</a>
+          <a class="" href="reminders.html"><span class="material-symbols-outlined">event_upcoming</span>Reminders</a>
+          <a class="" href="send-email.html"><span class="material-symbols-outlined">mail</span>Send Email</a>
+          <a class="" href="send-sms.html"><span class="material-symbols-outlined">sms</span>Send SMS</a>
+          <a class="" href="notification-logs.html"><span class="material-symbols-outlined">history</span>Logs</a>
+        </aside>
+      <section class="user-content">
+        <section class="notification-hero">
+          <div class="notification-hero-copy">
+            <p class="page-kicker">Message center</p>
+            <h1>Notifications</h1>
+            <p>Send, schedule, and review borrower notifications for loan updates, payments, and account activity.</p>
+          </div>
+          <section class="panel">
+            <h2>Delivery Overview</h2>
+            <div class="profile-list">
+              <div class="profile-row"><span>Sent today</span><strong>1,248</strong></div>
+              <div class="profile-row"><span>Delivery rate</span><strong>96%</strong></div>
+              <div class="profile-row"><span>Failed messages</span><strong>17</strong></div>
+            </div>
+          </section>
+        </section>
+        <section class="notification-type-grid">
+          <article class="panel notification-type-card"><span class="material-symbols-outlined">mail</span><h2>Email</h2><p class="muted">Loan updates, receipts, and support notices.</p></article>
+          <article class="panel notification-type-card"><span class="material-symbols-outlined">sms</span><h2>SMS</h2><p class="muted">Short due date and verification reminders.</p></article>
+          <article class="panel notification-type-card"><span class="material-symbols-outlined">campaign</span><h2>Announcements</h2><p class="muted">System-wide updates and service notices.</p></article>
+          <article class="panel notification-type-card"><span class="material-symbols-outlined">event_upcoming</span><h2>Reminders</h2><p class="muted">Scheduled payment and document alerts.</p></article>
+        </section><section class="panel">
+          <div class="page-head"><div><p class="page-kicker">History</p><h2>Recent Deliveries</h2><p>Monitor delivery outcomes across email, SMS, announcements, and reminders.</p></div><a class="btn btn-small" href="send-email.html">Compose</a></div>
+          <div class="notification-log-list">
+            <article class="notification-log-item"><span class="material-symbols-outlined">mail</span><div><strong>Loan approval email</strong><span>Sent to Lance Navarro</span></div><time>May 24, 2026 6:42 PM</time></article>
+            <article class="notification-log-item"><span class="material-symbols-outlined">sms</span><div><strong>Payment reminder SMS</strong><span>Queued for overdue borrowers</span></div><time>May 24, 2026 5:15 PM</time></article>
+            <article class="notification-log-item"><span class="material-symbols-outlined">campaign</span><div><strong>Maintenance announcement</strong><span>Delivered to all active accounts</span></div><time>May 24, 2026 2:30 PM</time></article>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="notifications.html"><span class="material-symbols-outlined">notifications</span><span>Center</span></a>
+    <a href="announcement.html"><span class="material-symbols-outlined">campaign</span><span>Announce</span></a>
+    <a href="reminders.html"><span class="material-symbols-outlined">event_upcoming</span><span>Remind</span></a>
+    <a href="send-email.html"><span class="material-symbols-outlined">mail</span><span>Email</span></a>
+    <a href="notification-logs.html"><span class="material-symbols-outlined">history</span><span>Logs</span></a>
+  </nav>
+  <script src="../../../static/script.js"></script>
+</body>
+</html>
+

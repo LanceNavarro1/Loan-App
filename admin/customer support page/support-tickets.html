@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Tickets - Easy Loan Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body class="support-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Support navigation">
+      <a href="support-tickets.html">Tickets</a>
+      <a href="live-chat.html">Chat</a>
+      <a href="customer-concerns.html">Concerns</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="../user/notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../user/dashboard.html">Account</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="support-sidebar" aria-label="Support sections">
+          <a class="active" href="support-tickets.html"><span class="material-symbols-outlined">support_agent</span>Support Tickets</a>
+          <a class="" href="live-chat.html"><span class="material-symbols-outlined">quickreply</span>Live Chat</a>
+          <a class="" href="customer-concerns.html"><span class="material-symbols-outlined">report</span>Customer Concerns</a>
+          <a class="" href="feedback.html"><span class="material-symbols-outlined">rate_review</span>Feedback</a>
+          <a class="" href="ticket-details.html"><span class="material-symbols-outlined">assignment</span>Ticket Details</a>
+        </aside>
+      <section class="user-content">
+        <section class="support-hero">
+          <div class="support-hero-panel">
+            <p class="page-kicker">Ticket queue</p>
+            <h1>Support Tickets</h1>
+            <p>Track borrower questions, repayment concerns, document issues, and loan application requests.</p>
+          </div>
+          <section class="panel support-status-panel">
+            <h2>Support Summary</h2>
+            <div class="profile-list">
+              <div class="profile-row"><span>Open tickets</span><strong>24</strong></div>
+              <div class="profile-row"><span>Average first response</span><strong>8 minutes</strong></div>
+              <div class="profile-row"><span>Escalations today</span><strong>3</strong></div>
+            </div>
+          </section>
+        </section>
+        <section class="support-channel-grid">
+          <article class="panel support-channel"><span class="material-symbols-outlined">confirmation_number</span><h2>Tickets</h2><p class="muted">Organize payment, loan, document, and account issues.</p></article>
+          <article class="panel support-channel"><span class="material-symbols-outlined">forum</span><h2>Chat</h2><p class="muted">Help borrowers quickly before issues become escalations.</p></article>
+          <article class="panel support-channel"><span class="material-symbols-outlined">thumb_up</span><h2>Feedback</h2><p class="muted">Capture what borrowers say about the process.</p></article>
+        </section>
+        <section class="panel">
+          <div class="page-head"><div><p class="page-kicker">Open cases</p><h2>Ticket Queue</h2><p>Search, review, and route customer support issues.</p></div><a class="btn btn-small" href="customer-concerns.html">New Concern</a></div>
+          <section class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Ticket ID</th><th>Customer</th><th>Topic</th><th>Priority</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>SUP-2026-104</td><td>Lance Navarro</td><td>Payment confirmation</td><td>High</td><td><span class="status pending">Open</span></td><td><a class="btn-secondary" href="ticket-details.html">View</a></td></tr>
+              <tr><td>SUP-2026-098</td><td>Mia Santos</td><td>Document upload</td><td>Normal</td><td><span class="status approved">Resolved</span></td><td><a class="btn-secondary" href="ticket-details.html">View</a></td></tr>
+              <tr><td>SUP-2026-092</td><td>Ramon Cruz</td><td>Loan status</td><td>Urgent</td><td><span class="status rejected">Escalated</span></td><td><a class="btn-secondary" href="ticket-details.html">Review</a></td></tr>
+            </tbody>
+          </table>
+        </section>
+        </section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="support-tickets.html"><span class="material-symbols-outlined">confirmation_number</span><span>Tickets</span></a>
+    <a href="live-chat.html"><span class="material-symbols-outlined">forum</span><span>Chat</span></a>
+    <a href="customer-concerns.html"><span class="material-symbols-outlined">report</span><span>Concerns</span></a>
+    <a href="feedback.html"><span class="material-symbols-outlined">rate_review</span><span>Feedback</span></a>
+    <a href="../user/dashboard.html"><span class="material-symbols-outlined">person</span><span>Account</span></a>
+  </nav>
+  <script src="../../../static/script.js"></script>
+</body>
+</html>
+

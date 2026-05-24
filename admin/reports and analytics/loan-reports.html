@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Reports - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="admin-page" data-page="reports" data-admin-depth="1">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../dashboard.html">
+        <span class="brand-mark">EL</span>
+        <div><h1>Easy Loan Admin</h1><p>Control room</p></div>
+      </a>
+      <nav class="nav" aria-label="Admin navigation"></nav>
+    </aside>
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">reports and analytics</p>
+          <h2>Loan Reports</h2>
+          <p>Manage loan reports records for the Easy Loan admin system.</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="../dashboard.html">Dashboard</a>
+          <button class="btn" type="button" data-action="Loan Reports action ready for backend integration.">Admin Action</button>
+        </div>
+      </section>
+      <section class="grid">
+        <article class="card"><span>Reviewed files</span><strong>1,284</strong><small>This month</small></article>
+        <article class="card"><span>Approval rate</span><strong>73%</strong><small>Across all loans</small></article>
+        <article class="card"><span>Revenue</span><strong>&#8369;842K</strong><small>Monthly gross</small></article>
+        <article class="card"><span>Exports</span><strong>36</strong><small>Generated reports</small></article>
+      </section>
+      <div class="content-grid"><section class="panel">
+          <div class="toolbar">
+            <input class="search" type="search" placeholder="Search records" data-search="#admin-records" aria-label="Search records">
+            <button class="btn secondary" type="button" data-action="Export queued for backend integration.">Export</button>
+            <button class="btn" type="button" data-action="New record form ready for backend integration.">New</button>
+          </div>
+          <table id="admin-records">
+            <thead><tr><th>Report ID</th><th>Report</th><th>Period</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>RPT-501</td><td>Loan Portfolio</td><td>May 2026</td><td><span class="status good">Ready</span></td><td><button class="btn secondary" type="button" data-action="Report exported.">Export</button></td></tr>
+              <tr><td>RPT-502</td><td>Payment Aging</td><td>May 2026</td><td><span class="status warn">Review</span></td><td><button class="btn secondary" type="button" data-action="Report opened.">Open</button></td></tr>
+              <tr><td>RPT-503</td><td>Revenue Summary</td><td>May 2026</td><td><span class="status good">Ready</span></td><td><button class="btn secondary" type="button" data-action="Report exported.">Export</button></td></tr>
+            </tbody>
+          </table>
+        </section><section class="panel">
+          <h3>Monthly Trend</h3>
+          <div class="chart" aria-label="Monthly trend chart">
+            <span class="bar" style="height:44%"></span>
+            <span class="bar" style="height:62%"></span>
+            <span class="bar" style="height:51%"></span>
+            <span class="bar" style="height:78%"></span>
+            <span class="bar" style="height:69%"></span>
+            <span class="bar" style="height:88%"></span>
+          </div>
+        </section></div>
+    </main>
+  </div>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

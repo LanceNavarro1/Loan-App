@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login History - Easy Loan Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body class="security-page user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../landing.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <nav class="desktop-nav" aria-label="Security navigation">
+      <a class="" href="security-settings.html">Settings</a>
+      <a class="" href="two-factor-authentication.html">2FA</a>
+      <a class="active" href="login-history.html">History</a>
+      <a class="" href="activity-logs.html">Logs</a>
+    </nav>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications/notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../Admin/dashboard.html">Admin</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="security-nav" aria-label="Security sections">
+          <a class="" href="security-settings.html"><span class="material-symbols-outlined">shield</span>Security Settings</a>
+          <a class="" href="two-factor-authentication.html"><span class="material-symbols-outlined">passkey</span>Two-Factor Auth</a>
+          <a class="active" href="login-history.html"><span class="material-symbols-outlined">login</span>Login History</a>
+          <a class="" href="activity-logs.html"><span class="material-symbols-outlined">manage_search</span>Activity Logs</a>
+          <a class="" href="backup-restore.html"><span class="material-symbols-outlined">backup</span>Backup Restore</a>
+        </aside>
+      <section class="user-content">
+        <section class="security-hero">
+          <div class="security-hero-copy">
+            <p class="page-kicker">Access monitoring</p>
+            <h1>Login History</h1>
+            <p>Review recent sign-ins, devices, locations, and suspicious login attempts.</p>
+          </div>
+          <section class="panel">
+            <h2>Security Score</h2>
+            <div class="security-score"><div><strong>91%</strong><span>Protected</span></div></div>
+          </section>
+        </section>
+        <section class="panel"><div class="page-head"><div><p class="page-kicker">Access</p><h2>Recent Logins</h2><p>Review successful and blocked sign-in attempts.</p></div><a class="btn btn-small" href="security-settings.html">Settings</a></div><section class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>User</th><th>Device</th><th>Location</th><th>Time</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>admin@easyloan.test</td><td>Chrome / Windows</td><td>Manila, PH</td><td>May 24, 2026 6:42 PM</td><td><span class="status approved">Allowed</span></td></tr>
+              <tr><td>support@easyloan.test</td><td>Edge / Windows</td><td>Quezon City, PH</td><td>May 24, 2026 5:51 PM</td><td><span class="status approved">Allowed</span></td></tr>
+              <tr><td>unknown@example.com</td><td>Unknown device</td><td>Unknown</td><td>May 24, 2026 4:18 PM</td><td><span class="status rejected">Blocked</span></td></tr>
+            </tbody>
+          </table>
+        </section></section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="security-settings.html"><span class="material-symbols-outlined">shield</span><span>Secure</span></a>
+    <a href="two-factor-authentication.html"><span class="material-symbols-outlined">passkey</span><span>2FA</span></a>
+    <a href="login-history.html"><span class="material-symbols-outlined">login</span><span>Logins</span></a>
+    <a href="activity-logs.html"><span class="material-symbols-outlined">history</span><span>Logs</span></a>
+    <a href="backup-restore.html"><span class="material-symbols-outlined">backup</span><span>Backup</span></a>
+  </nav>
+  <script src="../../../static/script.js"></script>
+</body>
+</html>
+

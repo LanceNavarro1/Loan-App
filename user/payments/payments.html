@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <div class="user-actions">
+      <a class="icon-button" href="../notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+      <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
+        <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="../notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
+        <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
+        <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+      <section class="user-content">
+        <div class="page-head">
+          <div><p class="page-kicker">Payment tracking</p><h1>Payments</h1><p>Monitor paid and unpaid loan payments with due dates.</p></div>
+          <a class="btn btn-small" href="../support/support.html">Need Help?</a>
+        </div>
+        <section class="loan-status-hero panel">
+        <div class="loan-status-hero-copy">
+          <div class="loan-status-chip"><span class="material-symbols-outlined">payments</span><span>Active Loan</span></div>
+          <h2>Loan ID: #LN-2026-00123</h2>
+          <p>View your payment history and pay your loan balance. Keep your account current by confirming payments before the due date.</p>
+          <div class="loan-status-meta">
+            <div><span>Total Loan Amount</span><strong>&#8369;10,000</strong></div>
+            <div><span>Interest Rate</span><strong>5% / month</strong></div>
+            <div><span>Term</span><strong>6 months</strong></div>
+            <div><span>Status</span><strong>Active</strong></div>
+          </div>
+        </div>
+        <div class="loan-status-scorecard">
+          <div class="profile-list"><div class="profile-row"><span>Monthly Due</span><strong>&#8369;1,800</strong></div><div class="profile-row"><span>Remaining Balance</span><strong>&#8369;7,200</strong></div><div class="profile-row"><span>Next Due</span><strong>July 1, 2026</strong></div></div>
+        </div>
+      </section>
+
+      <div class="content-grid two">
+        <section class="panel">
+          <h2>Make a Payment</h2>
+          <form class="form-grid" data-demo-form>
+            <label class="field"><span>Select Loan</span><select required><option>#LN-2026-00123 - Personal Loan</option><option>#LN-2026-00111 - Emergency Loan</option></select></label>
+            <label class="field"><span>Payment Amount</span><input type="number" value="1800" required></label>
+            <label class="field"><span>Payment Method</span><select required><option>GCash</option><option>Bank Transfer</option><option>Cash (Admin Confirm)</option></select></label>
+            <label class="field"><span>Reference Number</span><input type="text" value="REF12345" required></label>
+            <label class="field"><span>Upload Receipt</span><input type="file" accept=".pdf,.jpg,.jpeg,.png"></label>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Pay Now</button><p class="muted" data-form-message></p></div>
+          </form>
+        </section>
+        <section class="panel">
+          <h2>Balance Overview</h2>
+          <div class="profile-list"><div class="profile-row"><span>Total Paid</span><strong>&#8369;2,400</strong></div><div class="profile-row"><span>Remaining Balance</span><strong>&#8369;7,200</strong></div><div class="profile-row"><span>Next Due Date</span><strong>July 1, 2026</strong></div><div class="profile-row"><span>Overdue Fees</span><strong>&#8369;0</strong></div></div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="page-head"><div><p class="page-kicker">Installment plan</p><h2>Payment Schedule</h2><p>Track upcoming installments and payment status.</p></div><a class="btn btn-small" href="upload-payment.html">Upload Payment</a></div>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Due Date</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead><tbody>
+          <tr><td>June 1, 2026</td><td>&#8369;1,800</td><td><span class="status paid">Paid</span></td><td><a class="btn-secondary" href="receipts.html">View</a></td></tr>
+          <tr><td>July 1, 2026</td><td>&#8369;1,800</td><td><span class="status pending">Pending</span></td><td><a class="btn-secondary" href="upload-payment.html">Pay</a></td></tr>
+          <tr><td>Aug 1, 2026</td><td>&#8369;1,800</td><td><span class="status pending">Pending</span></td><td><a class="btn-secondary" href="upload-payment.html">Pay</a></td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="panel">
+        <div class="page-head"><div><p class="page-kicker">Transactions</p><h2>Payment History</h2><p>Full history of submitted and verified payments.</p></div><a class="btn btn-small" href="payment-history.html">View All</a></div>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Date Paid</th><th>Amount Paid</th><th>Method Used</th><th>Reference Number</th><th>Status</th></tr></thead><tbody>
+          <tr><td>May 1, 2026</td><td>&#8369;1,800</td><td>GCash</td><td>REF12345</td><td><span class="status paid">Verified</span></td></tr>
+          <tr><td>Apr 1, 2026</td><td>&#8369;600</td><td>Bank Transfer</td><td>BNK44291</td><td><span class="status paid">Verified</span></td></tr>
+          <tr><td>Mar 28, 2026</td><td>&#8369;1,800</td><td>GCash</td><td>REF11120</td><td><span class="status pending">Pending Confirmation</span></td></tr>
+        </tbody></table></div>
+      </section>
+
+      <div class="content-grid two">
+        <section class="panel"><h2>Payment Status Indicators</h2><div class="profile-list"><div class="profile-row"><span>Paid</span><strong><span class="status paid">Paid</span></strong></div><div class="profile-row"><span>Pending Confirmation</span><strong><span class="status pending">Pending</span></strong></div><div class="profile-row"><span>Overdue</span><strong><span class="status rejected">Overdue</span></strong></div><div class="profile-row"><span>Failed Transaction</span><strong><span class="status rejected">Failed</span></strong></div></div></section>
+        <section class="panel"><h2>Notifications</h2><div class="notice-list"><article class="notice-card"><div class="icon-badge green"><span class="material-symbols-outlined">paid</span></div><div><strong>Your payment of &#8369;1,800 was received</strong><p>GCash reference REF12345 has been verified.</p></div></article><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">event_upcoming</span></div><div><strong>Upcoming due date in 3 days</strong><p>Your next payment is due on July 1, 2026.</p></div></article></div></section>
+      </div>
+
+      <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="upload-payment.html"><span class="material-symbols-outlined">payments</span>Pay Now</a><a class="action-tile" href="receipts.html"><span class="material-symbols-outlined">download</span>Download Receipt</a><a class="action-tile" href="payment-history.html"><span class="material-symbols-outlined">article</span>View Statement</a><a class="action-tile" href="../support/ticket.html"><span class="material-symbols-outlined">support_agent</span>Contact Support</a></div></section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

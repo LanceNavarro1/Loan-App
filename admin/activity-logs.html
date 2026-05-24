@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Logs - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="admin-page" data-page="activity logs" data-admin-depth="0">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">EL</span>
+        <div><h1>Easy Loan Admin</h1><p>Control room</p></div>
+      </a>
+      <nav class="nav" aria-label="Admin navigation"></nav>
+    </aside>
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Admin Portal</p>
+          <h2>Activity Logs</h2>
+          <p>Manage activity logs records for the Easy Loan admin system.</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="dashboard.html">Dashboard</a>
+          <button class="btn" type="button" data-action="Activity Logs action ready for backend integration.">Admin Action</button>
+        </div>
+      </section>
+      <section class="panel">
+          <div class="toolbar">
+            <input class="search" type="search" placeholder="Search records" data-search="#admin-records" aria-label="Search records">
+            <button class="btn secondary" type="button" data-action="Export queued for backend integration.">Export</button>
+            <button class="btn" type="button" data-action="New record form ready for backend integration.">New</button>
+          </div>
+          <table id="admin-records">
+            <thead><tr><th>Time</th><th>Admin</th><th>Activity</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>10:18 AM</td><td>Admin Lance</td><td>Approved borrower document</td><td><span class="status good">Recorded</span></td><td><button class="btn secondary" type="button" data-action="Activity opened.">Open</button></td></tr>
+              <tr><td>09:42 AM</td><td>Admin Mia</td><td>Updated loan plan rate</td><td><span class="status warn">Review</span></td><td><button class="btn secondary" type="button" data-action="Activity opened.">Open</button></td></tr>
+              <tr><td>08:55 AM</td><td>System</td><td>Daily payment report generated</td><td><span class="status good">Recorded</span></td><td><button class="btn secondary" type="button" data-action="Activity opened.">Open</button></td></tr>
+            </tbody>
+          </table>
+        </section>
+    </main>
+  </div>
+  <script src="../static/script.js"></script>
+</body>
+</html>

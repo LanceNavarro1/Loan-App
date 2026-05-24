@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="admin-page" data-page="dashboard" data-admin-depth="0">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">EL</span>
+        <div><h1>Easy Loan Admin</h1><p>Control room</p></div>
+      </a>
+      <nav class="nav" aria-label="Admin navigation"></nav>
+    </aside>
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Admin Portal</p>
+          <h2>Dashboard</h2>
+          <p>Manage dashboard records for the Easy Loan admin system.</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="dashboard.html">Dashboard</a>
+          <button class="btn" type="button" data-action="Dashboard action ready for backend integration.">Admin Action</button>
+        </div>
+      </section>
+      <section class="grid">
+        <article class="card"><span>Pending reviews</span><strong>42</strong><small>Need admin decision</small></article>
+        <article class="card"><span>Active borrowers</span><strong>2,418</strong><small>Across all accounts</small></article>
+        <article class="card"><span>Collected today</span><strong>&#8369;128K</strong><small>Confirmed payments</small></article>
+        <article class="card"><span>Overdue accounts</span><strong>18</strong><small>Requires follow-up</small></article>
+      </section>
+      <section class="admin-module-grid">
+        <a class="admin-module" href="user management/users.html"><span class="material-symbols-outlined">group</span><h3>User Management</h3><p>Create, edit, verify, block, and review borrower accounts.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+        <a class="admin-module" href="loan application page/loan-applications.html"><span class="material-symbols-outlined">request_quote</span><h3>Loan Applications</h3><p>Review pending, approved, rejected, and in-progress loan files.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+        <a class="admin-module" href="Payments Management/payments.html"><span class="material-symbols-outlined">payments</span><h3>Payments</h3><p>Confirm payments, issue receipts, penalties, and overdue accounts.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+        <a class="admin-module" href="reports and analytics/reports.html"><span class="material-symbols-outlined">monitoring</span><h3>Reports</h3><p>Track revenue, borrower, loan, payment, and monthly statistics.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+        <a class="admin-module" href="barrower verification page/kyc-verification.html"><span class="material-symbols-outlined">fact_check</span><h3>Borrower Verification</h3><p>Check KYC, valid IDs, income documents, and requirements.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+        <a class="admin-module" href="loan plans management/loan-plans.html"><span class="material-symbols-outlined">tune</span><h3>Loan Plans</h3><p>Manage categories, terms, rates, and loan plan setup.</p><div class="chip-row"><span>Open</span><span>Admin</span></div></a>
+      </section>
+      
+    </main>
+  </div>
+  <script src="../static/script.js"></script>
+</body>
+</html>

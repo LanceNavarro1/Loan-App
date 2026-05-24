@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users - Easy Loan Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="admin-page" data-page="users" data-admin-depth="1">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../dashboard.html">
+        <span class="brand-mark">EL</span>
+        <div><h1>Easy Loan Admin</h1><p>Control room</p></div>
+      </a>
+      <nav class="nav" aria-label="Admin navigation"></nav>
+    </aside>
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">user management</p>
+          <h2>Users</h2>
+          <p>Manage users records for the Easy Loan admin system.</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="../dashboard.html">Dashboard</a>
+          <button class="btn" type="button" data-action="Users action ready for backend integration.">Admin Action</button>
+        </div>
+      </section>
+      <div class="content-grid">
+        <section class="panel">
+          <div class="toolbar">
+            <input class="search" type="search" placeholder="Search records" data-search="#admin-records" aria-label="Search records">
+            <button class="btn secondary" type="button" data-action="Export queued for backend integration.">Export</button>
+            <button class="btn" type="button" data-action="New record form ready for backend integration.">New</button>
+          </div>
+          <table id="admin-records">
+            <thead><tr><th>User ID</th><th>Name</th><th>Email</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>USR-1024</td><td>Lance Navarro</td><td>lance@example.com</td><td><span class="status good">Verified</span></td><td><button class="btn secondary" type="button" data-action="User opened.">View</button></td></tr>
+              <tr><td>USR-1031</td><td>Mia Santos</td><td>mia@example.com</td><td><span class="status warn">Pending</span></td><td><button class="btn secondary" type="button" data-action="User opened.">Review</button></td></tr>
+              <tr><td>USR-1040</td><td>Ramon Cruz</td><td>ramon@example.com</td><td><span class="status bad">Blocked</span></td><td><button class="btn secondary" type="button" data-action="User opened.">Edit</button></td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="panel">
+          <h3>Priority Queue</h3>
+          <div class="admin-filter-tabs" data-filter-tabs>
+            <button class="is-active" type="button" data-filter-button="all">All</button>
+            <button type="button" data-filter-button="urgent">Urgent</button>
+            <button type="button" data-filter-button="review">Review</button>
+            <button type="button" data-filter-button="done">Done</button>
+          </div>
+          <div class="admin-task-list" data-filter-list>
+            <article data-filter-item="review"><strong>Queue</strong><span>Users records ready for review</span><button class="btn secondary" type="button" data-action="Queue opened.">Open</button></article>
+            <article data-filter-item="urgent"><strong>Urgent</strong><span>Accounts requiring same-day admin attention</span><button class="btn secondary" type="button" data-action="Urgent opened.">Open</button></article>
+            <article data-filter-item="done"><strong>Done</strong><span>Completed records awaiting backend sync</span><button class="btn secondary" type="button" data-action="Done opened.">Open</button></article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="../../static/script.js"></script>
+</body>
+</html>
