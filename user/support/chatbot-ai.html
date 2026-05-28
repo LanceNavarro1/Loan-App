@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Settings - Easy Loan</title>
+  <title>AI Assistant - Easy Loan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
       <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
     </div>
   </header>
+
   <main class="user-shell">
     <div class="user-layout">
       <aside class="user-sidebar" data-user-nav>
@@ -32,15 +33,31 @@
         <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
         <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
       </aside>
+
       <section class="user-content">
         <div class="page-head">
-          <div><p class="page-kicker">Account security</p><h1>Security Settings</h1><p>Manage login alerts, password protection, and account safeguards.</p></div>
-          <a class="btn btn-small" href="../support/support.html">Need Help?</a>
+          <div><p class="page-kicker">Smart help</p><h1>AI Assistant</h1><p>Ask about loan applications, payments, documents, balance, account access, or next steps.</p></div>
+          <a class="btn btn-small" href="ticket.html">Create Ticket</a>
         </div>
-        <section class="panel"><h2>Account Security</h2><div class="toggle-row"><div><strong>Email login alerts</strong><p class="muted">Notify me when my account signs in on a new device.</p></div><label class="toggle"><input type="checkbox" checked><span></span></label></div><div class="toggle-row"><div><strong>SMS reminders</strong><p class="muted">Send payment and account reminders by SMS.</p></div><label class="toggle"><input type="checkbox" checked><span></span></label></div></section>
+
+        <section class="panel ai-chat-shell">
+          <div class="ai-chat-head">
+            <div class="icon-badge green"><span class="material-symbols-outlined">smart_toy</span></div>
+            <div>
+              <h2>Chat from any page</h2>
+              <p class="muted">Use the AI Help button at the lower-right of the screen to talk with the Easy Loan assistant while browsing.</p>
+            </div>
+            <span class="status success">Ready</span>
+          </div>
+          <div class="quick-actions">
+            <button class="action-tile" type="button" data-floating-ai-toggle><span class="material-symbols-outlined">forum</span>Open AI Assistant</button>
+            <a class="action-tile" href="ticket.html"><span class="material-symbols-outlined">confirmation_number</span>Create Ticket</a>
+          </div>
+        </section>
       </section>
     </div>
   </main>
+
   <nav class="bottom-nav user-bottom-nav" data-user-nav>
     <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
     <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>

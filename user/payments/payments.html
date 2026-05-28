@@ -14,7 +14,6 @@
   <header class="top-app-bar user-topbar">
     <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
     <div class="user-actions">
-      <a class="icon-button" href="../notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
       <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
     </div>
   </header>
@@ -22,13 +21,13 @@
     <div class="user-layout">
       <aside class="user-sidebar" data-user-nav>
         <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loanplan/loan-plan.html"><span class="material-symbols-outlined">request_quote</span>Loan Plans</a>
         <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
         <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
         <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
         <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
         <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
         <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
-        <a href="../notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
         <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
         <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
         <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
@@ -38,38 +37,47 @@
           <div><p class="page-kicker">Payment tracking</p><h1>Payments</h1><p>Monitor paid and unpaid loan payments with due dates.</p></div>
           <a class="btn btn-small" href="../support/support.html">Need Help?</a>
         </div>
-        <section class="loan-status-hero panel">
+        <section class="loan-status-hero payment-hero panel" data-user-payment-hero>
         <div class="loan-status-hero-copy">
           <div class="loan-status-chip"><span class="material-symbols-outlined">payments</span><span>Active Loan</span></div>
-          <h2>Loan payments</h2>
-          <p>View your payment history and pay your loan balance. Keep your account current by confirming payments before the due date.</p>
+          <h2>Loan Payments</h2>
+          <p>Choose a loan, pick your payment channel, and submit the reference details for admin confirmation.</p>
           <div class="loan-status-meta">
-            <div><span>Total Loan Amount</span><strong>Loads from saved data</strong></div>
-            <div><span>Interest Rate</span><strong>5% / month</strong></div>
-            <div><span>Term</span><strong>6 months</strong></div>
-            <div><span>Status</span><strong>Active</strong></div>
+            <div><span>Total Loan Amount</span><strong>0</strong></div>
+            <div><span>Remaining Balance</span><strong>0</strong></div>
+            <div><span>Submitted Payments</span><strong>0</strong></div>
+            <div><span>Status</span><strong>No Active Loan</strong></div>
           </div>
-        </div>
-        <div class="loan-status-scorecard">
-          <div class="profile-list" data-user-payment-summary><div class="profile-row"><span>Submitted Payments</span><strong>0</strong></div></div>
         </div>
       </section>
 
-      <div class="content-grid two">
-        <section class="panel">
-          <h2>Make a Payment</h2>
-          <form class="form-grid" data-demo-form>
-            <label class="field"><span>Select Loan</span><select data-user-payment-options required><option>No submitted loans yet</option></select></label>
-            <label class="field"><span>Payment Amount</span><input type="number" name="paymentAmount" placeholder="Payment amount" required></label>
-            <label class="field"><span>Payment Method</span><select required><option>GCash</option><option>Bank Transfer</option><option>Cash (Admin Confirm)</option></select></label>
-            <label class="field"><span>Reference Number</span><input type="text" name="reference" placeholder="Payment reference" required></label>
-            <label class="field"><span>Upload Receipt</span><input type="file" accept=".pdf,.jpg,.jpeg,.png"></label>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Pay Now</button><p class="muted" data-form-message></p></div>
+      <div class="content-grid">
+        <section class="panel payment-form-panel">
+          <div class="panel-title-row"><div><p class="page-kicker">Submit payment</p><h2>Make a Payment</h2></div><span class="status pending">For Confirmation</span></div>
+          <form class="payment-form" data-demo-form>
+            <section class="payment-step">
+              <div class="payment-step-head"><span>1</span><div><strong>Choose Loan</strong><p>Select which loan this payment should apply to.</p></div></div>
+              <label class="field payment-select-field"><span>Select Loan</span><select data-user-payment-options required><option>No submitted loans yet</option></select></label>
+              <div class="payment-choice-grid" data-user-payment-loan-cards>
+                <button class="payment-choice-card is-selected" type="button"><span class="material-symbols-outlined">account_balance_wallet</span><strong>No loan selected</strong><small>Submit a loan first</small></button>
+              </div>
+            </section>
+
+            <section class="payment-step">
+              <div class="payment-step-head"><span>2</span><div><strong>Choose Payment Method</strong><p>Pick the channel used for this payment.</p></div></div>
+              <input type="hidden" name="paymentMethod" value="GCash" data-payment-method-input>
+              <div class="payment-choice-grid payment-method-grid">
+                <button class="payment-choice-card is-selected" type="button" data-payment-method-value="GCash"><span class="material-symbols-outlined">phone_iphone</span><strong>GCash</strong><small>Mobile wallet</small></button>
+                <button class="payment-choice-card" type="button" data-payment-method-value="PayMaya"><span class="material-symbols-outlined">account_balance_wallet</span><strong>PayMaya</strong><small>Maya wallet</small></button>
+                <button class="payment-choice-card" type="button" data-payment-method-value="Bank Transfer"><span class="material-symbols-outlined">account_balance</span><strong>Bank Transfer</strong><small>Online deposit</small></button>
+                <button class="payment-choice-card" type="button" data-payment-method-value="Cash (Admin Confirm)"><span class="material-symbols-outlined">payments</span><strong>Cash</strong><small>Admin confirms</small></button>
+              </div>
+            </section>
+            <input type="hidden" name="paymentAmount" data-payment-amount-input>
+            <input type="hidden" name="reference" data-payment-reference-input>
+
+            <div class="form-actions payment-submit-row"><button class="btn btn-primary" type="submit">Submit Payment</button><p class="muted" data-form-message></p></div>
           </form>
-        </section>
-        <section class="panel">
-          <h2>Balance Overview</h2>
-          <div class="profile-list" data-user-payment-summary><div class="profile-row"><span>Total Paid</span><strong>0</strong></div></div>
         </section>
       </div>
 
@@ -82,20 +90,32 @@
 
       <section class="panel">
         <div class="page-head"><div><p class="page-kicker">Transactions</p><h2>Payment History</h2><p>Full history of submitted and verified payments.</p></div><a class="btn btn-small" href="payment-history.html">View All</a></div>
-        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Date Paid</th><th>Amount Paid</th><th>Method Used</th><th>Reference Number</th><th>Status</th></tr></thead><tbody data-user-payment-table>
-          <tr><td colspan="5">No payments submitted yet.</td></tr>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Date Paid</th><th>Amount Paid</th><th>Method Used</th><th>Reference Number</th><th>Status</th><th>Action</th></tr></thead><tbody data-user-payment-table>
+          <tr><td colspan="6">No payments submitted yet.</td></tr>
         </tbody></table></div>
       </section>
 
-      <div class="content-grid two">
-        <section class="panel"><h2>Payment Status Indicators</h2><div class="profile-list"><div class="profile-row"><span>Paid</span><strong><span class="status paid">Paid</span></strong></div><div class="profile-row"><span>Pending Confirmation</span><strong><span class="status pending">Pending</span></strong></div><div class="profile-row"><span>Overdue</span><strong><span class="status rejected">Overdue</span></strong></div><div class="profile-row"><span>Failed Transaction</span><strong><span class="status rejected">Failed</span></strong></div></div></section>
-        <section class="panel"><h2>Notifications</h2><div class="notice-list" data-user-notices><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">info</span></div><div><strong>No payment activity yet</strong><p>Payment updates will appear here.</p></div></article></div></section>
-      </div>
-
-      <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="upload-payment.html"><span class="material-symbols-outlined">payments</span>Pay Now</a><a class="action-tile" href="receipts.html"><span class="material-symbols-outlined">download</span>Download Receipt</a><a class="action-tile" href="payment-history.html"><span class="material-symbols-outlined">article</span>View Statement</a><a class="action-tile" href="../support/ticket.html"><span class="material-symbols-outlined">support_agent</span>Contact Support</a></div></section>
+      <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="upload-payment.html"><span class="material-symbols-outlined">payments</span>Pay Now</a><a class="action-tile" href="receipts.html" data-latest-payment-receipt-download><span class="material-symbols-outlined">download</span>Download Receipt</a><a class="action-tile" href="payment-history.html"><span class="material-symbols-outlined">article</span>View Statement</a><a class="action-tile" href="../support/ticket.html"><span class="material-symbols-outlined">support_agent</span>Contact Support</a></div></section>
       </section>
     </div>
   </main>
+  <div class="payment-qr-backdrop" data-payment-qr-modal hidden>
+    <section class="payment-qr-card" role="dialog" aria-modal="true" aria-labelledby="payment-qr-title">
+      <button class="icon-button payment-qr-close" type="button" data-payment-qr-close aria-label="Close QR code"><span class="material-symbols-outlined">close</span></button>
+      <div>
+        <p class="page-kicker" data-payment-qr-kicker>GCash QR Payment</p>
+        <h3 id="payment-qr-title">Scan to pay Easy Loan</h3>
+        <p data-payment-qr-copy>Use GCash scan-to-pay, then enter the reference number and upload the receipt in the payment form.</p>
+        <div class="payment-qr-details">
+          <span>Account Name</span><strong>Easy Loan</strong>
+          <span>Channel</span><strong data-payment-qr-channel>GCash</strong>
+        </div>
+      </div>
+      <div class="payment-qr-code" aria-label="Demo GCash QR code">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+  </div>
   <nav class="bottom-nav user-bottom-nav" data-user-nav>
     <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
     <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>

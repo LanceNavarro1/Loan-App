@@ -10,14 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/styles.css">
 </head>
-<body class="auth-screen admin-page" data-page="login" data-admin-depth="0">
-  <section class="auth-card">
-    <a class="brand" href="index.html"><span class="brand-mark">EL</span><div><h1>Easy Loan Admin</h1><p>Secure access</p></div></a>
+<body class="auth-screen admin-page admin-auth-page" data-page="login" data-admin-depth="0">
+  <section class="auth-card admin-auth-card">
+    <a class="brand admin-auth-brand" href="index.html"><span class="brand-mark">EL</span><div><h1>Easy Loan Admin</h1><p>Secure access</p></div></a>
+    <div class="admin-auth-icon"><span class="material-symbols-outlined">admin_panel_settings</span></div>
     <h2>Admin Login</h2>
-    <p>Enter your admin credentials to continue to the dashboard.</p>
-    <form class="form-grid" data-login-form data-redirect="dashboard.html">
-      <label class="field"><span>Email</span><input type="email" required></label>
-      <label class="field"><span>Password</span><input type="password" required></label>
+    <p>Sign in to manage borrowers, loans, payments, and verification records.</p>
+    <form class="form-grid admin-login-form" data-admin-login-form data-redirect="dashboard.html">
+      <label class="field"><span>Email</span><input name="email" type="email" autocomplete="username" placeholder="admin@example.com" required></label>
+      <label class="field"><span>Password</span><input name="password" type="password" autocomplete="current-password" placeholder="Enter password" required></label>
       <button class="btn" type="submit">Sign In</button>
       <a class="btn-secondary btn-block" href="../django-admin/">Open Django Admin</a>
     </form>

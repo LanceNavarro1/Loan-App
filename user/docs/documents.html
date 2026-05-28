@@ -14,7 +14,6 @@
   <header class="top-app-bar user-topbar">
     <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
     <div class="user-actions">
-      <a class="icon-button" href="../notifications.html" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
       <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
     </div>
   </header>
@@ -22,20 +21,20 @@
     <div class="user-layout">
       <aside class="user-sidebar" data-user-nav>
         <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loanplan/loan-plan.html"><span class="material-symbols-outlined">request_quote</span>Loan Plans</a>
         <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
         <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
         <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
         <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
         <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
         <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
-        <a href="../notifications.html"><span class="material-symbols-outlined">notifications</span>Notifications</a>
         <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
         <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
         <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
       </aside>
       <section class="user-content">
         <div class="page-head">
-          <div><p class="page-kicker">Verification files</p><h1>Documents</h1><p>Manage the files used for identity checks, loan approval, and account review.</p></div>
+          <div><p class="page-kicker">Verification center</p><h1>Documents</h1><p>Download loan proof forms, check document status, and upload extra files for review.</p></div>
           <a class="btn btn-small" href="../support/support.html">Need Help?</a>
         </div>
         <section class="loan-status-hero panel" data-user-documents-status>
@@ -56,29 +55,20 @@
         </div>
       </section>
 
-      <div class="content-grid two">
-        <section class="panel"><h2>Required Documents Overview</h2><div class="profile-list"><div class="profile-row"><span>Uploaded Documents</span><strong>Loads from saved data</strong></div><div class="profile-row"><span>Status</span><strong><span class="status pending">For Review</span></strong></div></div></section>
-        <section class="panel"><h2>Upload Document</h2><form class="form-grid" data-demo-form><label class="field"><span>Select Document Type</span><select required><option>Valid ID</option><option>Proof of Income</option><option>Selfie with ID</option><option>Utility Bill</option></select></label><label class="field"><span>Upload File</span><input type="file" accept=".jpg,.jpeg,.png,.pdf" required></label><label class="field"><span>Description</span><textarea placeholder="Optional notes for the verifier."></textarea></label><div class="form-actions"><button class="btn btn-primary" type="submit">Upload Document</button><p class="muted" data-form-message></p></div></form></section>
-      </div>
-
       <section class="panel">
-        <div class="page-head"><div><p class="page-kicker">Uploaded files</p><h2>Document Status List</h2><p>Review every file uploaded for your loan verification.</p></div><a class="btn btn-small" href="erification-status.html">Verification Status</a></div>
-        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Document Type</th><th>File Name</th><th>Status</th><th>Date Uploaded</th><th>Action</th></tr></thead><tbody data-user-documents-table>
-          <tr><td colspan="5">No documents uploaded yet.</td></tr>
+        <div class="page-head">
+          <div>
+            <p class="page-kicker">Loan records</p>
+            <h2>Loan Details Information</h2>
+            <p>Download the submitted Loan Application Form for each existing loan record.</p>
+          </div>
+          <a class="btn btn-small" href="erification-status.html">Verification Status</a>
+        </div>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Form Type</th><th>Download File</th><th>Status</th><th>Submitted Date</th><th>Action</th></tr></thead><tbody data-user-documents-table>
+          <tr><td colspan="5">No loan application forms yet.</td></tr>
         </tbody></table></div>
       </section>
 
-      <div class="content-grid two">
-        <section class="panel"><h2>Verification Status</h2><div class="profile-list"><div class="profile-row"><span>Status</span><strong><span class="status pending">For Review</span></strong></div><div class="profile-row"><span>Completion</span><strong>Based on uploaded documents</strong></div><div class="profile-row"><span>Overall Result</span><strong>Waiting for admin review</strong></div></div></section>
-        <section class="panel"><h2>Admin Feedback</h2><div class="notice-list" data-user-notices><article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">info</span></div><div><strong>No document feedback yet</strong><p>Admin feedback will appear here.</p></div></article></div></section>
-      </div>
-
-      <div class="content-grid two">
-        <section class="panel"><h2>File Preview</h2><div class="documents-file-note">Preview selected document</div><div class="payment-preview"><article><span>File</span><strong>Loads from saved data</strong></article><article><span>Type</span><strong>Loads from saved data</strong></article><article><span>Status</span><strong>Loads from saved data</strong></article></div><div class="form-actions"><button class="btn-secondary" type="button">Download</button><button class="btn-secondary" type="button">Replace File</button><button class="btn-secondary" type="button">Delete File</button></div></section>
-        <section class="panel"><h2>Upload Guidelines</h2><div class="profile-list"><div class="profile-row"><span>Clarity</span><strong>File must be clear and readable</strong></div><div class="profile-row"><span>Max Size</span><strong>5MB</strong></div><div class="profile-row"><span>Allowed Formats</span><strong>JPG, PNG, PDF</strong></div><div class="profile-row"><span>Restriction</span><strong>No edited or blurred IDs</strong></div></div></section>
-      </div>
-
-      <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="#upload"><span class="material-symbols-outlined">upload_file</span>Upload New Document</a><a class="action-tile" href="#replace"><span class="material-symbols-outlined">change_circle</span>Replace Document</a><a class="action-tile" href="#delete"><span class="material-symbols-outlined">delete</span>Delete Document</a><a class="action-tile" href="erification-status.html"><span class="material-symbols-outlined">verified</span>Submit for Verification</a></div></section>
       </section>
     </div>
   </main>

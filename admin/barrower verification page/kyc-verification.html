@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KYC Verification - Easy Loan Admin</title>
+  <title>Borrower Verification - Easy Loan Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,46 +20,45 @@
       <nav class="nav" aria-label="Admin navigation"></nav>
     </aside>
     <main class="main">
-      <section class="topbar">
+      <section class="topbar admin-verification-hero">
         <div>
-          <p class="eyebrow">borrower verification page</p>
-          <h2>KYC Verification</h2>
-          <p>Manage kyc verification records for the Easy Loan admin system.</p>
+          <p class="eyebrow">verification review center</p>
+          <h2>Borrower Verification</h2>
+          <p>Check identity files, loan details, income capacity, and application status before approving borrower records.</p>
         </div>
         <div class="actions">
           <a class="btn secondary" href="../dashboard.html">Dashboard</a>
-          <button class="btn" type="button" data-action="KYC Verification action ready for backend integration.">Admin Action</button>
+          <a class="btn" href="documents.html">Documents</a>
         </div>
       </section>
-      <div class="content-grid">
-        <section class="panel">
-          <h3>KYC Verification</h3>
-          <form class="form-grid" data-demo-form>
-            <label class="field"><span>Reference ID</span><input type="text"></label>
-            <label class="field"><span>Borrower Name</span><input type="text"></label>
-            <label class="field"><span>Amount</span><input type="text"></label>
-            <label class="field"><span>Admin Notes</span><input type="text"></label>
-            <div class="actions">
-              <button class="btn" type="submit">Save</button>
-              <button class="btn secondary" type="button" data-action="Draft saved locally for backend integration.">Save Draft</button>
-            </div>
-          </form>
-        </section>
-        <section class="panel">
-          <h3>Priority Queue</h3>
-          <div class="admin-filter-tabs" data-filter-tabs>
-            <button class="is-active" type="button" data-filter-button="all">All</button>
-            <button type="button" data-filter-button="urgent">Urgent</button>
-            <button type="button" data-filter-button="review">Review</button>
-            <button type="button" data-filter-button="done">Done</button>
+      <section class="grid admin-metric-grid">
+        <article class="card admin-metric-card"><div class="metric-card-head"><span class="material-symbols-outlined">group</span><span>Borrowers</span></div><strong>0</strong><small>Registered users</small></article>
+        <article class="card admin-metric-card"><div class="metric-card-head"><span class="material-symbols-outlined">pending_actions</span><span>Pending Reviews</span></div><strong>0</strong><small>Need verification</small></article>
+        <article class="card admin-metric-card"><div class="metric-card-head"><span class="material-symbols-outlined">fact_check</span><span>Applications</span></div><strong>0</strong><small>Submitted loans</small></article>
+        <article class="card admin-metric-card"><div class="metric-card-head"><span class="material-symbols-outlined">folder</span><span>Uploaded Files</span></div><strong>0</strong><small>IDs and proof files</small></article>
+      </section>
+      <section class="panel admin-verification-panel">
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">borrower queue</p>
+            <h3>Application Verification Board</h3>
+            <p>Each row combines the borrower profile, loan request, uploaded verification files, and income review signals.</p>
           </div>
-          <div class="admin-task-list" data-filter-list>
-            <article data-filter-item="review"><strong>Review</strong><span>Complete kyc verification checklist</span><button class="btn secondary" type="button" data-action="Review opened.">Open</button></article>
-            <article data-filter-item="urgent"><strong>Compliance</strong><span>Validate uploaded documents and profile data</span><button class="btn secondary" type="button" data-action="Compliance opened.">Open</button></article>
-            <article data-filter-item="done"><strong>Decision</strong><span>Submit admin action for backend processing</span><button class="btn secondary" type="button" data-action="Decision opened.">Open</button></article>
+          <div class="toolbar">
+            <input class="search" type="search" placeholder="Search borrower, email, loan, or file" data-search="#admin-records" aria-label="Search borrower verification records">
+            <a class="btn secondary" href="borrower-requirements.html">Requirements</a>
+            <a class="btn secondary" href="document-verification.html">Document Review</a>
           </div>
-        </section>
-      </div>
+        </div>
+        <div class="data-table-wrap">
+          <table id="admin-records">
+            <thead><tr><th>Borrower</th><th>Loan Details</th><th>Submitted Documents</th><th>Income Review</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td colspan="6">Borrower verification records load from saved data.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../../static/script.js"></script>

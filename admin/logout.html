@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/styles.css">
 </head>
-<body class="auth-screen admin-page" data-page="logout" data-admin-depth="0">
-  <section class="auth-card">
-    <a class="brand" href="index.html"><span class="brand-mark">EL</span><div><h1>Easy Loan Admin</h1><p>Signed out</p></div></a>
+<body class="auth-screen admin-page admin-auth-page" data-page="logout" data-admin-depth="0">
+  <section class="auth-card admin-auth-card admin-logout-card">
+    <a class="brand admin-auth-brand" href="index.html"><span class="brand-mark">EL</span><div><h1>Easy Loan Admin</h1><p>Signed out</p></div></a>
+    <div class="admin-auth-icon"><span class="material-symbols-outlined">logout</span></div>
     <h2>Session Ended</h2>
-    <p>Your admin session has ended safely.</p>
-    <div class="actions"><a class="btn" href="login.html">Sign In Again</a><a class="btn secondary" href="../landing.html">Back to Site</a></div>
+    <p>Your admin session has ended safely. Sign in again to continue managing the system.</p>
+    <div class="actions admin-auth-actions"><a class="btn" href="login.html">Sign In Again</a><a class="btn secondary" href="../landing.html">Back to Site</a></div>
   </section>
   <script src="../static/script.js"></script>
 </body>

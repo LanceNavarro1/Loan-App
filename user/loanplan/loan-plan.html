@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Plans - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <div class="user-actions">
+      <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
+    </div>
+  </header>
+
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="loan-plan.html"><span class="material-symbols-outlined">request_quote</span>Loan Plans</a>
+        <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
+        <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
+        <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+
+      <section class="user-content">
+        <div class="page-head">
+          <div>
+            <p class="page-kicker">Borrower options</p>
+            <h1>Loan Plans</h1>
+            <p>Compare available Easy Loan plans by amount, monthly interest, repayment term, and sample monthly payment.</p>
+          </div>
+          <a class="btn btn-small" href="../loans/apply-loan.html">Apply Now</a>
+        </div>
+
+        <section class="loan-plan-hero panel">
+          <div>
+            <div class="loan-status-chip"><span class="material-symbols-outlined">request_quote</span><span>Plan Guide</span></div>
+            <h2>Choose the plan that fits your loan purpose</h2>
+            <p class="muted">Click a plan to preview payment details. Final approval and exact computation are still subject to review.</p>
+          </div>
+          <div class="loan-plan-highlight">
+            <span>Lowest Monthly Rate</span>
+            <strong>1.5%</strong>
+            <small>Student Loan Plan</small>
+          </div>
+        </section>
+
+        <section class="loan-plan-grid" aria-label="Loan plan cards">
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Starter Loan Plan" data-plan-amount="&#8369;5,000 - &#8369;20,000" data-plan-rate="5% Monthly" data-plan-term="3 - 6 Months" data-plan-example="&#8369;3,500/month" data-plan-description="Best for first-time borrowers needing quick cash assistance." data-plan-min="5000" data-plan-months="6" data-plan-rate-value="5">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">rocket_launch</span><h2>Starter Loan Plan</h2></div>
+            <p>Best for first-time borrowers needing quick cash assistance.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;5,000 - &#8369;20,000</strong></div>
+              <div><span>Interest Rate</span><strong>5% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>3 - 6 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;3,500/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Personal Loan Plan" data-plan-amount="&#8369;20,000 - &#8369;100,000" data-plan-rate="3% Monthly" data-plan-term="6 - 24 Months" data-plan-example="&#8369;5,200/month" data-plan-description="Flexible loan for personal expenses, tuition, gadgets, or emergencies." data-plan-min="20000" data-plan-months="12" data-plan-rate-value="3">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">person</span><h2>Personal Loan Plan</h2></div>
+            <p>Flexible loan for personal expenses, tuition, gadgets, or emergencies.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;20,000 - &#8369;100,000</strong></div>
+              <div><span>Interest Rate</span><strong>3% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>6 - 24 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;5,200/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Business Loan Plan" data-plan-amount="&#8369;50,000 - &#8369;500,000" data-plan-rate="2.5% Monthly" data-plan-term="12 - 36 Months" data-plan-example="&#8369;15,000/month" data-plan-description="Designed for small business capital and expansion." data-plan-min="50000" data-plan-months="24" data-plan-rate-value="2.5">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">storefront</span><h2>Business Loan Plan</h2></div>
+            <p>Designed for small business capital and expansion.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;50,000 - &#8369;500,000</strong></div>
+              <div><span>Interest Rate</span><strong>2.5% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>12 - 36 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;15,000/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Salary Loan Plan" data-plan-amount="&#8369;10,000 - &#8369;50,000" data-plan-rate="2% Monthly" data-plan-term="6 - 12 Months" data-plan-example="&#8369;4,800/month" data-plan-description="Available for employed users with proof of income." data-plan-min="10000" data-plan-months="12" data-plan-rate-value="2">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">badge</span><h2>Salary Loan Plan</h2></div>
+            <p>Available for employed users with proof of income.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;10,000 - &#8369;50,000</strong></div>
+              <div><span>Interest Rate</span><strong>2% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>6 - 12 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;4,800/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Emergency Loan Plan" data-plan-amount="&#8369;3,000 - &#8369;15,000" data-plan-rate="6% Monthly" data-plan-term="1 - 3 Months" data-plan-example="&#8369;5,500/month" data-plan-description="Fast approval loan for medical or urgent emergencies." data-plan-min="3000" data-plan-months="3" data-plan-rate-value="6">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">emergency</span><h2>Emergency Loan Plan</h2></div>
+            <p>Fast approval loan for medical or urgent emergencies.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;3,000 - &#8369;15,000</strong></div>
+              <div><span>Interest Rate</span><strong>6% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>1 - 3 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;5,500/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+
+          <button class="loan-plan-card" type="button" data-loan-plan-open data-plan-name="Student Loan Plan" data-plan-amount="&#8369;10,000 - &#8369;80,000" data-plan-rate="1.5% Monthly" data-plan-term="12 - 48 Months" data-plan-example="&#8369;2,300/month" data-plan-description="Supports tuition fees, school supplies, and educational needs." data-plan-min="10000" data-plan-months="24" data-plan-rate-value="1.5">
+            <div class="loan-plan-card-head"><span class="material-symbols-outlined">school</span><h2>Student Loan Plan</h2></div>
+            <p>Supports tuition fees, school supplies, and educational needs.</p>
+            <div class="loan-plan-facts">
+              <div><span>Loan Amount</span><strong>&#8369;10,000 - &#8369;80,000</strong></div>
+              <div><span>Interest Rate</span><strong>1.5% Monthly</strong></div>
+              <div><span>Repayment Term</span><strong>12 - 48 Months</strong></div>
+              <div><span>Payments</span><strong>&#8369;2,300/month</strong></div>
+            </div>
+            <span class="loan-plan-card-action">View payment preview</span>
+          </button>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-backdrop loan-plan-modal-backdrop" data-loan-plan-modal hidden>
+    <section class="loan-plan-modal" role="dialog" aria-modal="true" aria-labelledby="loan-plan-modal-title">
+      <button class="icon-button modal-close" type="button" data-loan-plan-close aria-label="Close plan payment preview"><span class="material-symbols-outlined">close</span></button>
+      <div class="loan-plan-modal-head">
+        <p class="page-kicker">Application preview</p>
+        <h2 id="loan-plan-modal-title" data-plan-modal-name>Loan Plan</h2>
+        <p class="muted" data-plan-modal-description>Review the selected plan details.</p>
+      </div>
+      <form class="loan-plan-payment-form" data-loan-plan-payment-form>
+        <div class="loan-plan-modal-grid">
+          <article><span>Loan Amount</span><strong data-plan-modal-amount>--</strong></article>
+          <article><span>Interest Rate</span><strong data-plan-modal-rate>--</strong></article>
+          <article><span>Repayment Term</span><strong data-plan-modal-term>--</strong></article>
+          <article><span>Sample Monthly</span><strong data-plan-modal-example>--</strong></article>
+        </div>
+
+        <div class="loan-plan-estimate">
+          <label class="field"><span>Amount to Preview</span><input type="text" name="previewAmount" data-plan-preview-amount data-money-input inputmode="numeric" required></label>
+          <div class="loan-plan-apply-note"><span class="material-symbols-outlined">info</span><p>Click Apply This Plan to save this selected plan as a loan application for admin review.</p></div>
+        </div>
+
+        <div class="loan-plan-payment-result">
+          <div><span>Estimated Payable</span><strong data-plan-modal-total>--</strong></div>
+          <div><span>Estimated Monthly</span><strong data-plan-modal-monthly>--</strong></div>
+        </div>
+
+        <div class="form-actions">
+          <a class="btn btn-primary" href="../loans/apply-loan.html" data-plan-apply-link>Apply This Plan</a>
+          <button class="btn-secondary" type="button" data-loan-plan-close>Close</button>
+          <p class="muted" data-plan-modal-message></p>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="loan-plan.html"><span class="material-symbols-outlined">request_quote</span><span>Plans</span></a>
+    <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../../static/script.js"></script>
+</body>
+</html>

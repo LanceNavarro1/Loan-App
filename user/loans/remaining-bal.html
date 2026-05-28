@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remaining Balance - Easy Loan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/styles.css">
+</head>
+<body class="user-body">
+  <header class="top-app-bar user-topbar">
+    <a class="brand" href="../dashboard.html"><span class="material-symbols-outlined brand-icon">account_balance</span><span>Easy Loan</span></a>
+    <div class="user-actions">
+      <a class="btn btn-small" href="../loans/apply-loan.html">Apply</a>
+    </div>
+  </header>
+  <main class="user-shell">
+    <div class="user-layout">
+      <aside class="user-sidebar" data-user-nav>
+        <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+        <a href="../loanplan/loan-plan.html"><span class="material-symbols-outlined">request_quote</span>Loan Plans</a>
+        <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">edit_document</span>Apply Loan</a>
+        <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My Loans</a>
+        <a href="../loans/loan-status.html"><span class="material-symbols-outlined">monitoring</span>Loan Status</a>
+        <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Payments</a>
+        <a href="../docs/documents.html"><span class="material-symbols-outlined">description</span>Documents</a>
+        <a href="../schedule.html"><span class="material-symbols-outlined">calendar_month</span>Schedule</a>
+        <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span>Profile</a>
+        <a href="../support/support.html"><span class="material-symbols-outlined">support_agent</span>Support</a>
+        <a href="../settings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </aside>
+      <section class="user-content">
+        <div class="page-head">
+          <div><p class="page-kicker">Loan balance</p><h1>Remaining Balance</h1><p>Review outstanding loan balances based on your submitted loans and payment records.</p></div>
+          <a class="btn btn-small" href="../payments/payments.html">Pay Now</a>
+        </div>
+
+        <section class="panel remaining-balance-hero" data-user-remaining-summary>
+          <div>
+            <div class="loan-status-chip"><span class="material-symbols-outlined">savings</span><span>Account Balance</span></div>
+            <h2>Loading saved balance</h2>
+            <p class="muted">Your balance will update after saved loan and payment data loads.</p>
+            <div class="progress-track"><span style="width:0%"></span></div>
+          </div>
+          <div class="remaining-balance-total">
+            <span>Remaining Balance</span>
+            <strong>0</strong>
+            <small>0% paid</small>
+          </div>
+        </section>
+
+        <div class="content-grid three" data-user-remaining-metrics>
+          <article class="metric-card"><span>Total Loan Amount</span><strong>0</strong><small>0 submitted loans</small></article>
+          <article class="metric-card"><span>Total Paid</span><strong>0</strong><small>0 payment records</small></article>
+          <article class="metric-card"><span>Remaining Balance</span><strong>0</strong><small>Based on saved data</small></article>
+        </div>
+
+        <div class="content-grid two">
+          <section class="panel">
+            <div class="panel-title-row"><h2>Latest Loan Balance</h2><a class="btn-secondary compact" href="loan-status.html">Track Status</a></div>
+            <div class="profile-list" data-user-remaining-latest>
+              <div class="profile-row"><span>Loan ID</span><strong>No loan yet</strong></div>
+              <div class="profile-row"><span>Amount</span><strong>0</strong></div>
+              <div class="profile-row"><span>Paid</span><strong>0</strong></div>
+              <div class="profile-row"><span>Remaining</span><strong>0</strong></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-title-row"><h2>Payment Guide</h2><a class="btn-secondary compact" href="../payments/upload-payment.html">Upload Proof</a></div>
+            <div class="notice-list">
+              <article class="notice-card"><div class="icon-badge blue"><span class="material-symbols-outlined">receipt_long</span></div><div><strong>Submitted payments are counted</strong><p>Every saved payment record linked to your loan reduces the displayed balance.</p></div></article>
+              <article class="notice-card"><div class="icon-badge green"><span class="material-symbols-outlined">verified</span></div><div><strong>Admin status stays visible</strong><p>Loan status is shown from the same records used in My Loans and Loan Status.</p></div></article>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="page-head"><div><p class="page-kicker">Per-loan breakdown</p><h2>Balance Details</h2><p>Each row is calculated from its saved loan amount minus linked payments.</p></div><a class="btn btn-small" href="../payments/payments.html">Make Payment</a></div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Loan ID</th><th>Type</th><th>Total Amount</th><th>Paid</th><th>Remaining</th><th>Monthly Due</th><th>Status</th></tr></thead>
+              <tbody data-user-remaining-table>
+                <tr><td colspan="7">No loan applications yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel"><h2>Actions</h2><div class="quick-actions"><a class="action-tile" href="../payments/payments.html"><span class="material-symbols-outlined">payments</span>Make a payment</a><a class="action-tile" href="../payments/payment-history.html"><span class="material-symbols-outlined">history</span>Payment history</a><a class="action-tile" href="loans.html"><span class="material-symbols-outlined">account_balance_wallet</span>My loans</a><a class="action-tile" href="../support/ticket.html"><span class="material-symbols-outlined">support_agent</span>Contact support</a></div></section>
+      </section>
+    </div>
+  </main>
+  <nav class="bottom-nav user-bottom-nav" data-user-nav>
+    <a href="../dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Home</span></a>
+    <a href="../loans/loans.html"><span class="material-symbols-outlined">account_balance_wallet</span><span>Loans</span></a>
+    <a href="../loans/apply-loan.html"><span class="material-symbols-outlined">add_card</span><span>Apply</span></a>
+    <a href="../payments/payments.html"><span class="material-symbols-outlined">payments</span><span>Pay</span></a>
+    <a href="../profile/profile.html"><span class="material-symbols-outlined">person</span><span>Profile</span></a>
+  </nav>
+  <script src="../../static/script.js"></script>
+</body>
+</html>
